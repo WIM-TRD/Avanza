@@ -1,6 +1,6 @@
 # avanzaForJava
 Java controller for the unofficial Avanza API created as a way of learning progarmming in Java.
-Note that the project is only a proof of principle and should not be used by any other purposes.
+Note that the project is only a proof of concept and should not be used by any other purposes.
 
 # Project Status
 Incomplete. 
@@ -15,5 +15,6 @@ API:
 - https://github.com/Qluxzz/avanza
 - https://github.com/fhqvst/avanza
 - https://github.com/Eitraz/avanza-api
+
 TOTP:
 - https://github.com/susam/mintotp
