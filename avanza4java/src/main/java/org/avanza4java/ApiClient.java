@@ -1,14 +1,14 @@
 package org.avanza4java;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 import org.avanza4java.Config.Constants;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.avanza4java.HTTP.HTTPMethod;
 import org.avanza4java.HTTP.Responses.HTTPResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,13 +25,12 @@ import java.util.stream.Collectors;
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 
-
 public class ApiClient {
+   private final static Logger LOGGER = LoggerFactory.getLogger(ApiClient.class);
+   private static boolean authenticated;
    private final String username;
    private final String password;
    private final String totp;
-   private static boolean authenticated;
-   private final static Logger LOGGER = LoggerFactory.getLogger(ApiClient.class);
 
    public ApiClient(String username, String password, String totp) {
       this.username = username;
@@ -43,7 +42,7 @@ public class ApiClient {
    public <T> HTTPResponse<T> call(HTTPMethod method, Map<String, String> headers, JsonObject data,
                                    String urlextension, Class<T> responseType) {
       if (authenticated) {
-         if(urlextension.substring(urlextension.length() - 1).equals("?")){
+         if (urlextension.substring(urlextension.length() - 1).equals("?")) {
             urlextension = urlextension.substring(0, urlextension.length() - 1);
          }
          return (request(method, headers, data, urlextension, responseType));
@@ -76,7 +75,8 @@ public class ApiClient {
          int responseCode = avanzaConnection.getResponseCode();
          String responseBody = "";
          try (InputStream inputStream = getResponseInputStream(avanzaConnection, responseCode)) {
-            responseBody = readInputStream(inputStream); ;
+            responseBody = readInputStream(inputStream);
+            ;
          }
          if ((responseCode >= 200 &&
               responseCode <= 299)) {
@@ -107,7 +107,7 @@ public class ApiClient {
    private String readInputStream(InputStream inputStream) throws IOException {
       StringBuilder responseBody = new StringBuilder(IOUtils.toString(inputStream, StandardCharsets.UTF_8));
       int openingBracket = responseBody.toString().indexOf("[");
-      if(openingBracket == 0){
+      if (openingBracket == 0) {
          responseBody.deleteCharAt(openingBracket);
          int closingBracket = responseBody.toString().lastIndexOf("]");
          responseBody.deleteCharAt(closingBracket);

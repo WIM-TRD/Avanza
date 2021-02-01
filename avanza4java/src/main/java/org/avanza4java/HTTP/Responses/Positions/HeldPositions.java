@@ -1,18 +1,13 @@
 package org.avanza4java.HTTP.Responses.Positions;
 
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "instrumentPositions",
         "totalBalance",
         "totalBuyingPower",
@@ -22,77 +17,77 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class HeldPositions {
 
-   @JsonProperty("instrumentPositions")
+   @JsonProperty ("instrumentPositions")
    private List<InstrumentPosition> instrumentPositions = null;
-   @JsonProperty("totalBalance")
+   @JsonProperty ("totalBalance")
    private String totalBalance;
-   @JsonProperty("totalBuyingPower")
+   @JsonProperty ("totalBuyingPower")
    private String totalBuyingPower;
-   @JsonProperty("totalOwnCapital")
+   @JsonProperty ("totalOwnCapital")
    private String totalOwnCapital;
-   @JsonProperty("totalProfit")
+   @JsonProperty ("totalProfit")
    private String totalProfit;
-   @JsonProperty("totalProfitPercent")
+   @JsonProperty ("totalProfitPercent")
    private String totalProfitPercent;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("instrumentPositions")
+   @JsonProperty ("instrumentPositions")
    public List<InstrumentPosition> getInstrumentPositions() {
       return instrumentPositions;
    }
 
-   @JsonProperty("instrumentPositions")
+   @JsonProperty ("instrumentPositions")
    public void setInstrumentPositions(List<InstrumentPosition> instrumentPositions) {
       this.instrumentPositions = instrumentPositions;
    }
 
-   @JsonProperty("totalBalance")
+   @JsonProperty ("totalBalance")
    public String getTotalBalance() {
       return totalBalance;
    }
 
-   @JsonProperty("totalBalance")
+   @JsonProperty ("totalBalance")
    public void setTotalBalance(String totalBalance) {
       this.totalBalance = totalBalance;
    }
 
-   @JsonProperty("totalBuyingPower")
+   @JsonProperty ("totalBuyingPower")
    public String getTotalBuyingPower() {
       return totalBuyingPower;
    }
 
-   @JsonProperty("totalBuyingPower")
+   @JsonProperty ("totalBuyingPower")
    public void setTotalBuyingPower(String totalBuyingPower) {
       this.totalBuyingPower = totalBuyingPower;
    }
 
-   @JsonProperty("totalOwnCapital")
+   @JsonProperty ("totalOwnCapital")
    public String getTotalOwnCapital() {
       return totalOwnCapital;
    }
 
-   @JsonProperty("totalOwnCapital")
+   @JsonProperty ("totalOwnCapital")
    public void setTotalOwnCapital(String totalOwnCapital) {
       this.totalOwnCapital = totalOwnCapital;
    }
 
-   @JsonProperty("totalProfit")
+   @JsonProperty ("totalProfit")
    public String getTotalProfit() {
       return totalProfit;
    }
 
-   @JsonProperty("totalProfit")
+   @JsonProperty ("totalProfit")
    public void setTotalProfit(String totalProfit) {
       this.totalProfit = totalProfit;
    }
 
-   @JsonProperty("totalProfitPercent")
+   @JsonProperty ("totalProfitPercent")
    public String getTotalProfitPercent() {
       return totalProfitPercent;
    }
 
-   @JsonProperty("totalProfitPercent")
+   @JsonProperty ("totalProfitPercent")
    public void setTotalProfitPercent(String totalProfitPercent) {
       this.totalProfitPercent = totalProfitPercent;
    }

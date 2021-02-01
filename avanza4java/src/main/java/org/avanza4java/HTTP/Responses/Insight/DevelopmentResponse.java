@@ -1,21 +1,17 @@
 package org.avanza4java.HTTP.Responses.Insight;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 import org.avanza4java.HTTP.Responses.Charts.ChartDatum;
 import org.avanza4java.HTTP.Responses.InstrumentInfo.Instrument;
 import org.avanza4java.HTTP.Responses.Transaction.OtherTransactions;
 import org.avanza4java.HTTP.Responses.Transaction.TransactionsResponse;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "chartData",
         "hasUnusedInstrument",
         "instruments",
@@ -26,89 +22,89 @@ import org.avanza4java.HTTP.Responses.Transaction.TransactionsResponse;
 })
 public class DevelopmentResponse {
 
-   @JsonProperty("chartData")
+   @JsonProperty ("chartData")
    private List<ChartDatum> chartData = null;
-   @JsonProperty("hasUnusedInstrument")
+   @JsonProperty ("hasUnusedInstrument")
    private String hasUnusedInstrument;
-   @JsonProperty("instruments")
+   @JsonProperty ("instruments")
    private List<Instrument> instruments = null;
-   @JsonProperty("fromDate")
+   @JsonProperty ("fromDate")
    private String fromDate;
-   @JsonProperty("otherTransactions")
+   @JsonProperty ("otherTransactions")
    private OtherTransactions otherTransactions;
-   @JsonProperty("totalDevelopment")
+   @JsonProperty ("totalDevelopment")
    private TotalDevelopment totalDevelopment;
-   @JsonProperty("transactionsResponse")
+   @JsonProperty ("transactionsResponse")
    private TransactionsResponse transactionsResponse;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("chartData")
+   @JsonProperty ("chartData")
    public List<ChartDatum> getChartData() {
       return chartData;
    }
 
-   @JsonProperty("chartData")
+   @JsonProperty ("chartData")
    public void setChartData(List<ChartDatum> chartData) {
       this.chartData = chartData;
    }
 
-   @JsonProperty("hasUnusedInstrument")
+   @JsonProperty ("hasUnusedInstrument")
    public String getHasUnusedInstrument() {
       return hasUnusedInstrument;
    }
 
-   @JsonProperty("hasUnusedInstrument")
+   @JsonProperty ("hasUnusedInstrument")
    public void setHasUnusedInstrument(String hasUnusedInstrument) {
       this.hasUnusedInstrument = hasUnusedInstrument;
    }
 
-   @JsonProperty("instruments")
+   @JsonProperty ("instruments")
    public List<Instrument> getInstruments() {
       return instruments;
    }
 
-   @JsonProperty("instruments")
+   @JsonProperty ("instruments")
    public void setInstruments(List<Instrument> instruments) {
       this.instruments = instruments;
    }
 
-   @JsonProperty("fromDate")
+   @JsonProperty ("fromDate")
    public String getFromDate() {
       return fromDate;
    }
 
-   @JsonProperty("fromDate")
+   @JsonProperty ("fromDate")
    public void setFromDate(String fromDate) {
       this.fromDate = fromDate;
    }
 
-   @JsonProperty("otherTransactions")
+   @JsonProperty ("otherTransactions")
    public OtherTransactions getOtherTransactions() {
       return otherTransactions;
    }
 
-   @JsonProperty("otherTransactions")
+   @JsonProperty ("otherTransactions")
    public void setOtherTransactions(OtherTransactions otherTransactions) {
       this.otherTransactions = otherTransactions;
    }
 
-   @JsonProperty("totalDevelopment")
+   @JsonProperty ("totalDevelopment")
    public TotalDevelopment getTotalDevelopment() {
       return totalDevelopment;
    }
 
-   @JsonProperty("totalDevelopment")
+   @JsonProperty ("totalDevelopment")
    public void setTotalDevelopment(TotalDevelopment totalDevelopment) {
       this.totalDevelopment = totalDevelopment;
    }
 
-   @JsonProperty("transactionsResponse")
+   @JsonProperty ("transactionsResponse")
    public TransactionsResponse getTransactionsResponse() {
       return transactionsResponse;
    }
 
-   @JsonProperty("transactionsResponse")
+   @JsonProperty ("transactionsResponse")
    public void setTransactionsResponse(TransactionsResponse transactionsResponse) {
       this.transactionsResponse = transactionsResponse;
    }

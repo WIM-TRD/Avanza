@@ -1,16 +1,12 @@
 package org.avanza4java.HTTP.Responses.Transaction;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "buyer",
         "cancelled",
         "dealTime",
@@ -21,89 +17,89 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class LatestTrade {
 
-   @JsonProperty("buyer")
+   @JsonProperty ("buyer")
    private String buyer;
-   @JsonProperty("cancelled")
+   @JsonProperty ("cancelled")
    private String cancelled;
-   @JsonProperty("dealTime")
+   @JsonProperty ("dealTime")
    private String dealTime;
-   @JsonProperty("matchedOnMarket")
+   @JsonProperty ("matchedOnMarket")
    private String matchedOnMarket;
-   @JsonProperty("price")
+   @JsonProperty ("price")
    private String price;
-   @JsonProperty("seller")
+   @JsonProperty ("seller")
    private String seller;
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    private String volume;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("buyer")
+   @JsonProperty ("buyer")
    public String getBuyer() {
       return buyer;
    }
 
-   @JsonProperty("buyer")
+   @JsonProperty ("buyer")
    public void setBuyer(String buyer) {
       this.buyer = buyer;
    }
 
-   @JsonProperty("cancelled")
+   @JsonProperty ("cancelled")
    public String getCancelled() {
       return cancelled;
    }
 
-   @JsonProperty("cancelled")
+   @JsonProperty ("cancelled")
    public void setCancelled(String cancelled) {
       this.cancelled = cancelled;
    }
 
-   @JsonProperty("dealTime")
+   @JsonProperty ("dealTime")
    public String getDealTime() {
       return dealTime;
    }
 
-   @JsonProperty("dealTime")
+   @JsonProperty ("dealTime")
    public void setDealTime(String dealTime) {
       this.dealTime = dealTime;
    }
 
-   @JsonProperty("matchedOnMarket")
+   @JsonProperty ("matchedOnMarket")
    public String getMatchedOnMarket() {
       return matchedOnMarket;
    }
 
-   @JsonProperty("matchedOnMarket")
+   @JsonProperty ("matchedOnMarket")
    public void setMatchedOnMarket(String matchedOnMarket) {
       this.matchedOnMarket = matchedOnMarket;
    }
 
-   @JsonProperty("price")
+   @JsonProperty ("price")
    public String getPrice() {
       return price;
    }
 
-   @JsonProperty("price")
+   @JsonProperty ("price")
    public void setPrice(String price) {
       this.price = price;
    }
 
-   @JsonProperty("seller")
+   @JsonProperty ("seller")
    public String getSeller() {
       return seller;
    }
 
-   @JsonProperty("seller")
+   @JsonProperty ("seller")
    public void setSeller(String seller) {
       this.seller = seller;
    }
 
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    public String getVolume() {
       return volume;
    }
 
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    public void setVolume(String volume) {
       this.volume = volume;
    }

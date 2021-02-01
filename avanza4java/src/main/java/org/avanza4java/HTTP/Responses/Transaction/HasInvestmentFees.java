@@ -1,44 +1,40 @@
 package org.avanza4java.HTTP.Responses.Transaction;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "buy",
         "sell"
 })
 public class HasInvestmentFees {
 
-   @JsonProperty("buy")
+   @JsonProperty ("buy")
    private String buy;
-   @JsonProperty("sell")
+   @JsonProperty ("sell")
    private String sell;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("buy")
+   @JsonProperty ("buy")
    public String getBuy() {
       return buy;
    }
 
-   @JsonProperty("buy")
+   @JsonProperty ("buy")
    public void setBuy(String buy) {
       this.buy = buy;
    }
 
-   @JsonProperty("sell")
+   @JsonProperty ("sell")
    public String getSell() {
       return sell;
    }
 
-   @JsonProperty("sell")
+   @JsonProperty ("sell")
    public void setSell(String sell) {
       this.sell = sell;
    }

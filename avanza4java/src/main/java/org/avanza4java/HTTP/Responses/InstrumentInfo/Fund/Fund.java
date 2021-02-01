@@ -1,17 +1,12 @@
 package org.avanza4java.HTTP.Responses.InstrumentInfo.Fund;
 
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "NAV",
         "buyFee",
         "buyTradeDate",
@@ -35,245 +30,245 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class Fund {
 
-   @JsonProperty("NAV")
+   @JsonProperty ("NAV")
    private String nAV;
-   @JsonProperty("buyFee")
+   @JsonProperty ("buyFee")
    private String buyFee;
-   @JsonProperty("buyTradeDate")
+   @JsonProperty ("buyTradeDate")
    private String buyTradeDate;
-   @JsonProperty("buyVisibleDate")
+   @JsonProperty ("buyVisibleDate")
    private String buyVisibleDate;
-   @JsonProperty("id")
+   @JsonProperty ("id")
    private String id;
-   @JsonProperty("loanFactor")
+   @JsonProperty ("loanFactor")
    private String loanFactor;
-   @JsonProperty("managementFee")
+   @JsonProperty ("managementFee")
    private String managementFee;
-   @JsonProperty("minStartAmount")
+   @JsonProperty ("minStartAmount")
    private String minStartAmount;
-   @JsonProperty("name")
+   @JsonProperty ("name")
    private String name;
-   @JsonProperty("otherFees")
+   @JsonProperty ("otherFees")
    private String otherFees;
-   @JsonProperty("otherOrderDescription")
+   @JsonProperty ("otherOrderDescription")
    private String otherOrderDescription;
-   @JsonProperty("positionValue")
+   @JsonProperty ("positionValue")
    private String positionValue;
-   @JsonProperty("positionVolume")
+   @JsonProperty ("positionVolume")
    private String positionVolume;
-   @JsonProperty("prospectus")
+   @JsonProperty ("prospectus")
    private String prospectus;
-   @JsonProperty("sellFee")
+   @JsonProperty ("sellFee")
    private String sellFee;
-   @JsonProperty("sellTradeDate")
+   @JsonProperty ("sellTradeDate")
    private String sellTradeDate;
-   @JsonProperty("sellVisibleDate")
+   @JsonProperty ("sellVisibleDate")
    private String sellVisibleDate;
-   @JsonProperty("stopTime")
+   @JsonProperty ("stopTime")
    private String stopTime;
-   @JsonProperty("tradable")
+   @JsonProperty ("tradable")
    private String tradable;
-   @JsonProperty("type")
+   @JsonProperty ("type")
    private String type;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("NAV")
+   @JsonProperty ("NAV")
    public String getNAV() {
       return nAV;
    }
 
-   @JsonProperty("NAV")
+   @JsonProperty ("NAV")
    public void setNAV(String nAV) {
       this.nAV = nAV;
    }
 
-   @JsonProperty("buyFee")
+   @JsonProperty ("buyFee")
    public String getBuyFee() {
       return buyFee;
    }
 
-   @JsonProperty("buyFee")
+   @JsonProperty ("buyFee")
    public void setBuyFee(String buyFee) {
       this.buyFee = buyFee;
    }
 
-   @JsonProperty("buyTradeDate")
+   @JsonProperty ("buyTradeDate")
    public String getBuyTradeDate() {
       return buyTradeDate;
    }
 
-   @JsonProperty("buyTradeDate")
+   @JsonProperty ("buyTradeDate")
    public void setBuyTradeDate(String buyTradeDate) {
       this.buyTradeDate = buyTradeDate;
    }
 
-   @JsonProperty("buyVisibleDate")
+   @JsonProperty ("buyVisibleDate")
    public String getBuyVisibleDate() {
       return buyVisibleDate;
    }
 
-   @JsonProperty("buyVisibleDate")
+   @JsonProperty ("buyVisibleDate")
    public void setBuyVisibleDate(String buyVisibleDate) {
       this.buyVisibleDate = buyVisibleDate;
    }
 
-   @JsonProperty("id")
+   @JsonProperty ("id")
    public String getId() {
       return id;
    }
 
-   @JsonProperty("id")
+   @JsonProperty ("id")
    public void setId(String id) {
       this.id = id;
    }
 
-   @JsonProperty("loanFactor")
+   @JsonProperty ("loanFactor")
    public String getLoanFactor() {
       return loanFactor;
    }
 
-   @JsonProperty("loanFactor")
+   @JsonProperty ("loanFactor")
    public void setLoanFactor(String loanFactor) {
       this.loanFactor = loanFactor;
    }
 
-   @JsonProperty("managementFee")
+   @JsonProperty ("managementFee")
    public String getManagementFee() {
       return managementFee;
    }
 
-   @JsonProperty("managementFee")
+   @JsonProperty ("managementFee")
    public void setManagementFee(String managementFee) {
       this.managementFee = managementFee;
    }
 
-   @JsonProperty("minStartAmount")
+   @JsonProperty ("minStartAmount")
    public String getMinStartAmount() {
       return minStartAmount;
    }
 
-   @JsonProperty("minStartAmount")
+   @JsonProperty ("minStartAmount")
    public void setMinStartAmount(String minStartAmount) {
       this.minStartAmount = minStartAmount;
    }
 
-   @JsonProperty("name")
+   @JsonProperty ("name")
    public String getName() {
       return name;
    }
 
-   @JsonProperty("name")
+   @JsonProperty ("name")
    public void setName(String name) {
       this.name = name;
    }
 
-   @JsonProperty("otherFees")
+   @JsonProperty ("otherFees")
    public String getOtherFees() {
       return otherFees;
    }
 
-   @JsonProperty("otherFees")
+   @JsonProperty ("otherFees")
    public void setOtherFees(String otherFees) {
       this.otherFees = otherFees;
    }
 
-   @JsonProperty("otherOrderDescription")
+   @JsonProperty ("otherOrderDescription")
    public String getOtherOrderDescription() {
       return otherOrderDescription;
    }
 
-   @JsonProperty("otherOrderDescription")
+   @JsonProperty ("otherOrderDescription")
    public void setOtherOrderDescription(String otherOrderDescription) {
       this.otherOrderDescription = otherOrderDescription;
    }
 
-   @JsonProperty("positionValue")
+   @JsonProperty ("positionValue")
    public String getPositionValue() {
       return positionValue;
    }
 
-   @JsonProperty("positionValue")
+   @JsonProperty ("positionValue")
    public void setPositionValue(String positionValue) {
       this.positionValue = positionValue;
    }
 
-   @JsonProperty("positionVolume")
+   @JsonProperty ("positionVolume")
    public String getPositionVolume() {
       return positionVolume;
    }
 
-   @JsonProperty("positionVolume")
+   @JsonProperty ("positionVolume")
    public void setPositionVolume(String positionVolume) {
       this.positionVolume = positionVolume;
    }
 
-   @JsonProperty("prospectus")
+   @JsonProperty ("prospectus")
    public String getProspectus() {
       return prospectus;
    }
 
-   @JsonProperty("prospectus")
+   @JsonProperty ("prospectus")
    public void setProspectus(String prospectus) {
       this.prospectus = prospectus;
    }
 
-   @JsonProperty("sellFee")
+   @JsonProperty ("sellFee")
    public String getSellFee() {
       return sellFee;
    }
 
-   @JsonProperty("sellFee")
+   @JsonProperty ("sellFee")
    public void setSellFee(String sellFee) {
       this.sellFee = sellFee;
    }
 
-   @JsonProperty("sellTradeDate")
+   @JsonProperty ("sellTradeDate")
    public String getSellTradeDate() {
       return sellTradeDate;
    }
 
-   @JsonProperty("sellTradeDate")
+   @JsonProperty ("sellTradeDate")
    public void setSellTradeDate(String sellTradeDate) {
       this.sellTradeDate = sellTradeDate;
    }
 
-   @JsonProperty("sellVisibleDate")
+   @JsonProperty ("sellVisibleDate")
    public String getSellVisibleDate() {
       return sellVisibleDate;
    }
 
-   @JsonProperty("sellVisibleDate")
+   @JsonProperty ("sellVisibleDate")
    public void setSellVisibleDate(String sellVisibleDate) {
       this.sellVisibleDate = sellVisibleDate;
    }
 
-   @JsonProperty("stopTime")
+   @JsonProperty ("stopTime")
    public String getStopTime() {
       return stopTime;
    }
 
-   @JsonProperty("stopTime")
+   @JsonProperty ("stopTime")
    public void setStopTime(String stopTime) {
       this.stopTime = stopTime;
    }
 
-   @JsonProperty("tradable")
+   @JsonProperty ("tradable")
    public String getTradable() {
       return tradable;
    }
 
-   @JsonProperty("tradable")
+   @JsonProperty ("tradable")
    public void setTradable(String tradable) {
       this.tradable = tradable;
    }
 
-   @JsonProperty("type")
+   @JsonProperty ("type")
    public String getType() {
       return type;
    }
 
-   @JsonProperty("type")
+   @JsonProperty ("type")
    public void setType(String type) {
       this.type = type;
    }

@@ -4,8 +4,9 @@ import org.avanza4java.HTTP.Authentication.TwoFactorLogin;
 import org.avanza4java.HTTP.Responses.HTTPResponse;
 
 public class LoginResponse extends HTTPResponse {
-    TwoFactorLogin twoFactorLogin;
-    public TwoFactorLogin getTwoFactorLogin() {
-        return twoFactorLogin;
-    }
+   TwoFactorLogin twoFactorLogin;
+
+   public TwoFactorLogin getTwoFactorLogin() {
+      return twoFactorLogin;
+   }
 }

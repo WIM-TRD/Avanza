@@ -1,6 +1,5 @@
 package org.avanza4java;
 
-
 import org.avanza4java.Config.Constants;
 import org.avanza4java.HTTP.HTTPMethod;
 import org.avanza4java.HTTP.Requests.Authentication.LoginRequest;
@@ -94,42 +93,40 @@ public class API {
                              Constants.ACCOUNT_OVERVIEW_PATH.replace("{0}", accountId), AccountOverview.class).getBody());
    }
 
-   public DealsAndOrders getDealsAndOrders(){
-      return(apiClient.call(HTTPMethod.GET, headers, null,
-                            Constants.DEALS_AND_ORDERS_PATH, DealsAndOrders.class).getBody());
+   public DealsAndOrders getDealsAndOrders() {
+      return (apiClient.call(HTTPMethod.GET, headers, null,
+                             Constants.DEALS_AND_ORDERS_PATH, DealsAndOrders.class).getBody());
    }
 
    public HeldPositions getPositions() {
-      return(apiClient.call(HTTPMethod.GET, headers, null,
-                            Constants.POSITIONS_PATH, HeldPositions.class).getBody());
+      return (apiClient.call(HTTPMethod.GET, headers, null,
+                             Constants.POSITIONS_PATH, HeldPositions.class).getBody());
    }
 
-   public Order placeOrder(OrderOptions orderOptions){
-      return(apiClient.call(HTTPMethod.POST, headers, orderOptions.toJson(),
-                     Constants.ORDER_PLACE_DELETE_PATH, Order.class).getBody());
+   public Order placeOrder(OrderOptions orderOptions) {
+      return (apiClient.call(HTTPMethod.POST, headers, orderOptions.toJson(),
+                             Constants.ORDER_PLACE_DELETE_PATH, Order.class).getBody());
    }
 
-   public Order editOrder(EditOrder editOrderOptions){
-      return(apiClient.call(HTTPMethod.PUT, headers, editOrderOptions.toJson(),
-                            editOrderOptions.getEditOrderExtension(), Order.class).getBody());
+   public Order editOrder(EditOrder editOrderOptions) {
+      return (apiClient.call(HTTPMethod.PUT, headers, editOrderOptions.toJson(),
+                             editOrderOptions.getEditOrderExtension(), Order.class).getBody());
    }
 
-   public OrderBookInfo getOrderbookinfo(String orderbookId, InstrumentType instrumentType){
-      return(apiClient.call(HTTPMethod.GET, headers, null,
-                            Constants.ORDERBOOK_PATH
-                                    .replace("{0}", instrumentType.toString())
-                                    .replace("{1}", orderbookId)
-                           ,OrderBookInfo.class).getBody());
+   public OrderBookInfo getOrderbookinfo(String orderbookId, InstrumentType instrumentType) {
+      return (apiClient.call(HTTPMethod.GET, headers, null,
+                             Constants.ORDERBOOK_PATH
+                                     .replace("{0}", instrumentType.toString())
+                                     .replace("{1}", orderbookId)
+              , OrderBookInfo.class).getBody());
    }
 
-   public InsightReport getInsightReport(String accountId, String timePeriod){
-      return(apiClient.call(HTTPMethod.GET, headers, null,
-                            Constants.INSIGHTS_PATH
-                              .replace("{0}", timePeriod)
-                              .replace("{1}", accountId)
-                           ,InsightReport.class).getBody());
+   public InsightReport getInsightReport(String accountId, String timePeriod) {
+      return (apiClient.call(HTTPMethod.GET, headers, null,
+                             Constants.INSIGHTS_PATH
+                                     .replace("{0}", timePeriod)
+                                     .replace("{1}", accountId)
+              , InsightReport.class).getBody());
    }
-
-
 
 }

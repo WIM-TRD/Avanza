@@ -1,44 +1,40 @@
 package org.avanza4java.HTTP.Responses.Customer;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "courtageClass",
         "showCourtageClassInfoOnOrderPage"
 })
 public class Customer {
 
-   @JsonProperty("courtageClass")
+   @JsonProperty ("courtageClass")
    private String courtageClass;
-   @JsonProperty("showCourtageClassInfoOnOrderPage")
+   @JsonProperty ("showCourtageClassInfoOnOrderPage")
    private String showCourtageClassInfoOnOrderPage;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("courtageClass")
+   @JsonProperty ("courtageClass")
    public String getCourtageClass() {
       return courtageClass;
    }
 
-   @JsonProperty("courtageClass")
+   @JsonProperty ("courtageClass")
    public void setCourtageClass(String courtageClass) {
       this.courtageClass = courtageClass;
    }
 
-   @JsonProperty("showCourtageClassInfoOnOrderPage")
+   @JsonProperty ("showCourtageClassInfoOnOrderPage")
    public String getShowCourtageClassInfoOnOrderPage() {
       return showCourtageClassInfoOnOrderPage;
    }
 
-   @JsonProperty("showCourtageClassInfoOnOrderPage")
+   @JsonProperty ("showCourtageClassInfoOnOrderPage")
    public void setShowCourtageClassInfoOnOrderPage(String showCourtageClassInfoOnOrderPage) {
       this.showCourtageClassInfoOnOrderPage = showCourtageClassInfoOnOrderPage;
    }

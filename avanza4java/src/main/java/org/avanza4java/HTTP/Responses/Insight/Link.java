@@ -1,16 +1,12 @@
 package org.avanza4java.HTTP.Responses.Insight;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "buyable",
         "flagCode",
         "linkDisplay",
@@ -23,113 +19,113 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class Link {
 
-   @JsonProperty("buyable")
+   @JsonProperty ("buyable")
    private String buyable;
-   @JsonProperty("flagCode")
+   @JsonProperty ("flagCode")
    private String flagCode;
-   @JsonProperty("linkDisplay")
+   @JsonProperty ("linkDisplay")
    private String linkDisplay;
-   @JsonProperty("orderbookId")
+   @JsonProperty ("orderbookId")
    private String orderbookId;
-   @JsonProperty("sellable")
+   @JsonProperty ("sellable")
    private String sellable;
-   @JsonProperty("shortLinkDisplay")
+   @JsonProperty ("shortLinkDisplay")
    private String shortLinkDisplay;
-   @JsonProperty("tradeable")
+   @JsonProperty ("tradeable")
    private String tradeable;
-   @JsonProperty("type")
+   @JsonProperty ("type")
    private String type;
-   @JsonProperty("urlDisplayName")
+   @JsonProperty ("urlDisplayName")
    private String urlDisplayName;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("buyable")
+   @JsonProperty ("buyable")
    public String getBuyable() {
       return buyable;
    }
 
-   @JsonProperty("buyable")
+   @JsonProperty ("buyable")
    public void setBuyable(String buyable) {
       this.buyable = buyable;
    }
 
-   @JsonProperty("flagCode")
+   @JsonProperty ("flagCode")
    public String getFlagCode() {
       return flagCode;
    }
 
-   @JsonProperty("flagCode")
+   @JsonProperty ("flagCode")
    public void setFlagCode(String flagCode) {
       this.flagCode = flagCode;
    }
 
-   @JsonProperty("linkDisplay")
+   @JsonProperty ("linkDisplay")
    public String getLinkDisplay() {
       return linkDisplay;
    }
 
-   @JsonProperty("linkDisplay")
+   @JsonProperty ("linkDisplay")
    public void setLinkDisplay(String linkDisplay) {
       this.linkDisplay = linkDisplay;
    }
 
-   @JsonProperty("orderbookId")
+   @JsonProperty ("orderbookId")
    public String getOrderbookId() {
       return orderbookId;
    }
 
-   @JsonProperty("orderbookId")
+   @JsonProperty ("orderbookId")
    public void setOrderbookId(String orderbookId) {
       this.orderbookId = orderbookId;
    }
 
-   @JsonProperty("sellable")
+   @JsonProperty ("sellable")
    public String getSellable() {
       return sellable;
    }
 
-   @JsonProperty("sellable")
+   @JsonProperty ("sellable")
    public void setSellable(String sellable) {
       this.sellable = sellable;
    }
 
-   @JsonProperty("shortLinkDisplay")
+   @JsonProperty ("shortLinkDisplay")
    public String getShortLinkDisplay() {
       return shortLinkDisplay;
    }
 
-   @JsonProperty("shortLinkDisplay")
+   @JsonProperty ("shortLinkDisplay")
    public void setShortLinkDisplay(String shortLinkDisplay) {
       this.shortLinkDisplay = shortLinkDisplay;
    }
 
-   @JsonProperty("tradeable")
+   @JsonProperty ("tradeable")
    public String getTradeable() {
       return tradeable;
    }
 
-   @JsonProperty("tradeable")
+   @JsonProperty ("tradeable")
    public void setTradeable(String tradeable) {
       this.tradeable = tradeable;
    }
 
-   @JsonProperty("type")
+   @JsonProperty ("type")
    public String getType() {
       return type;
    }
 
-   @JsonProperty("type")
+   @JsonProperty ("type")
    public void setType(String type) {
       this.type = type;
    }
 
-   @JsonProperty("urlDisplayName")
+   @JsonProperty ("urlDisplayName")
    public String getUrlDisplayName() {
       return urlDisplayName;
    }
 
-   @JsonProperty("urlDisplayName")
+   @JsonProperty ("urlDisplayName")
    public void setUrlDisplayName(String urlDisplayName) {
       this.urlDisplayName = urlDisplayName;
    }

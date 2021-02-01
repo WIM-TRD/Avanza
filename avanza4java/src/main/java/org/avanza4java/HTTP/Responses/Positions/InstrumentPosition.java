@@ -1,18 +1,13 @@
 package org.avanza4java.HTTP.Responses.Positions;
 
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "instrumentType",
         "positions",
         "todaysProfitPercent",
@@ -22,77 +17,77 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class InstrumentPosition {
 
-   @JsonProperty("instrumentType")
+   @JsonProperty ("instrumentType")
    private String instrumentType;
-   @JsonProperty("positions")
+   @JsonProperty ("positions")
    private List<Position> positions = null;
-   @JsonProperty("todaysProfitPercent")
+   @JsonProperty ("todaysProfitPercent")
    private String todaysProfitPercent;
-   @JsonProperty("totalProfitPercent")
+   @JsonProperty ("totalProfitPercent")
    private String totalProfitPercent;
-   @JsonProperty("totalProfitValue")
+   @JsonProperty ("totalProfitValue")
    private String totalProfitValue;
-   @JsonProperty("totalValue")
+   @JsonProperty ("totalValue")
    private String totalValue;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("instrumentType")
+   @JsonProperty ("instrumentType")
    public String getInstrumentType() {
       return instrumentType;
    }
 
-   @JsonProperty("instrumentType")
+   @JsonProperty ("instrumentType")
    public void setInstrumentType(String instrumentType) {
       this.instrumentType = instrumentType;
    }
 
-   @JsonProperty("positions")
+   @JsonProperty ("positions")
    public List<Position> getPositions() {
       return positions;
    }
 
-   @JsonProperty("positions")
+   @JsonProperty ("positions")
    public void setPositions(List<Position> positions) {
       this.positions = positions;
    }
 
-   @JsonProperty("todaysProfitPercent")
+   @JsonProperty ("todaysProfitPercent")
    public String getTodaysProfitPercent() {
       return todaysProfitPercent;
    }
 
-   @JsonProperty("todaysProfitPercent")
+   @JsonProperty ("todaysProfitPercent")
    public void setTodaysProfitPercent(String todaysProfitPercent) {
       this.todaysProfitPercent = todaysProfitPercent;
    }
 
-   @JsonProperty("totalProfitPercent")
+   @JsonProperty ("totalProfitPercent")
    public String getTotalProfitPercent() {
       return totalProfitPercent;
    }
 
-   @JsonProperty("totalProfitPercent")
+   @JsonProperty ("totalProfitPercent")
    public void setTotalProfitPercent(String totalProfitPercent) {
       this.totalProfitPercent = totalProfitPercent;
    }
 
-   @JsonProperty("totalProfitValue")
+   @JsonProperty ("totalProfitValue")
    public String getTotalProfitValue() {
       return totalProfitValue;
    }
 
-   @JsonProperty("totalProfitValue")
+   @JsonProperty ("totalProfitValue")
    public void setTotalProfitValue(String totalProfitValue) {
       this.totalProfitValue = totalProfitValue;
    }
 
-   @JsonProperty("totalValue")
+   @JsonProperty ("totalValue")
    public String getTotalValue() {
       return totalValue;
    }
 
-   @JsonProperty("totalValue")
+   @JsonProperty ("totalValue")
    public void setTotalValue(String totalValue) {
       this.totalValue = totalValue;
    }

@@ -1,17 +1,12 @@
 package org.avanza4java.HTTP.Responses.Transaction;
 
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "commission",
         "fundOrderFee",
         "marketFees",
@@ -21,77 +16,77 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class TransactionFees {
 
-   @JsonProperty("commission")
+   @JsonProperty ("commission")
    private String commission;
-   @JsonProperty("fundOrderFee")
+   @JsonProperty ("fundOrderFee")
    private FundOrderFee fundOrderFee;
-   @JsonProperty("marketFees")
+   @JsonProperty ("marketFees")
    private String marketFees;
-   @JsonProperty("totalFees")
+   @JsonProperty ("totalFees")
    private String totalFees;
-   @JsonProperty("totalSum")
+   @JsonProperty ("totalSum")
    private String totalSum;
-   @JsonProperty("totalSumWithoutFees")
+   @JsonProperty ("totalSumWithoutFees")
    private String totalSumWithoutFees;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("commission")
+   @JsonProperty ("commission")
    public String getCommission() {
       return commission;
    }
 
-   @JsonProperty("commission")
+   @JsonProperty ("commission")
    public void setCommission(String commission) {
       this.commission = commission;
    }
 
-   @JsonProperty("fundOrderFee")
+   @JsonProperty ("fundOrderFee")
    public FundOrderFee getFundOrderFee() {
       return fundOrderFee;
    }
 
-   @JsonProperty("fundOrderFee")
+   @JsonProperty ("fundOrderFee")
    public void setFundOrderFee(FundOrderFee fundOrderFee) {
       this.fundOrderFee = fundOrderFee;
    }
 
-   @JsonProperty("marketFees")
+   @JsonProperty ("marketFees")
    public String getMarketFees() {
       return marketFees;
    }
 
-   @JsonProperty("marketFees")
+   @JsonProperty ("marketFees")
    public void setMarketFees(String marketFees) {
       this.marketFees = marketFees;
    }
 
-   @JsonProperty("totalFees")
+   @JsonProperty ("totalFees")
    public String getTotalFees() {
       return totalFees;
    }
 
-   @JsonProperty("totalFees")
+   @JsonProperty ("totalFees")
    public void setTotalFees(String totalFees) {
       this.totalFees = totalFees;
    }
 
-   @JsonProperty("totalSum")
+   @JsonProperty ("totalSum")
    public String getTotalSum() {
       return totalSum;
    }
 
-   @JsonProperty("totalSum")
+   @JsonProperty ("totalSum")
    public void setTotalSum(String totalSum) {
       this.totalSum = totalSum;
    }
 
-   @JsonProperty("totalSumWithoutFees")
+   @JsonProperty ("totalSumWithoutFees")
    public String getTotalSumWithoutFees() {
       return totalSumWithoutFees;
    }
 
-   @JsonProperty("totalSumWithoutFees")
+   @JsonProperty ("totalSumWithoutFees")
    public void setTotalSumWithoutFees(String totalSumWithoutFees) {
       this.totalSumWithoutFees = totalSumWithoutFees;
    }

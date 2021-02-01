@@ -1,17 +1,12 @@
 package org.avanza4java.HTTP.Responses.Transaction;
 
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "count",
         "presentableTransactionType",
         "totalAmount",
@@ -19,53 +14,53 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class TransactionTotal {
 
-   @JsonProperty("count")
+   @JsonProperty ("count")
    private String count;
-   @JsonProperty("presentableTransactionType")
+   @JsonProperty ("presentableTransactionType")
    private String presentableTransactionType;
-   @JsonProperty("totalAmount")
+   @JsonProperty ("totalAmount")
    private String totalAmount;
-   @JsonProperty("transactionType")
+   @JsonProperty ("transactionType")
    private String transactionType;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("count")
+   @JsonProperty ("count")
    public String getCount() {
       return count;
    }
 
-   @JsonProperty("count")
+   @JsonProperty ("count")
    public void setCount(String count) {
       this.count = count;
    }
 
-   @JsonProperty("presentableTransactionType")
+   @JsonProperty ("presentableTransactionType")
    public String getPresentableTransactionType() {
       return presentableTransactionType;
    }
 
-   @JsonProperty("presentableTransactionType")
+   @JsonProperty ("presentableTransactionType")
    public void setPresentableTransactionType(String presentableTransactionType) {
       this.presentableTransactionType = presentableTransactionType;
    }
 
-   @JsonProperty("totalAmount")
+   @JsonProperty ("totalAmount")
    public String getTotalAmount() {
       return totalAmount;
    }
 
-   @JsonProperty("totalAmount")
+   @JsonProperty ("totalAmount")
    public void setTotalAmount(String totalAmount) {
       this.totalAmount = totalAmount;
    }
 
-   @JsonProperty("transactionType")
+   @JsonProperty ("transactionType")
    public String getTransactionType() {
       return transactionType;
    }
 
-   @JsonProperty("transactionType")
+   @JsonProperty ("transactionType")
    public void setTransactionType(String transactionType) {
       this.transactionType = transactionType;
    }

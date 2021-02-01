@@ -1,15 +1,6 @@
 package org.avanza4java.HTTP.Responses.Charts;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 import org.avanza4java.HTTP.Responses.Account.Account;
 import org.avanza4java.HTTP.Responses.Broker.BrokerTradeSummary;
 import org.avanza4java.HTTP.Responses.Customer.Customer;
@@ -20,6 +11,10 @@ import org.avanza4java.HTTP.Responses.Series.ComparisonSeries;
 import org.avanza4java.HTTP.Responses.Series.DataSeries;
 import org.avanza4java.HTTP.Responses.Transaction.HasInvestmentFees;
 import org.avanza4java.HTTP.Responses.Transaction.LatestTrade;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @JsonInclude (JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder ({
@@ -104,7 +99,7 @@ public class ChartData {
    private OrderBook orderbook;
    @JsonProperty ("tickSizeRules")
    private List<TickSizeRule> tickSizeRules = null;
-   @JsonProperty("untradableDates")
+   @JsonProperty ("untradableDates")
    private List<Object> untradableDates = null;
 
    @JsonIgnore
@@ -200,178 +195,175 @@ public class ChartData {
       this.min = min;
    }
 
-
-
-   @JsonProperty("account")
+   @JsonProperty ("account")
    public Account getAccount() {
       return account;
    }
 
-   @JsonProperty("account")
+   @JsonProperty ("account")
    public void setAccount(Account account) {
       this.account = account;
    }
 
-   @JsonProperty("brokerTradeSummary")
+   @JsonProperty ("brokerTradeSummary")
    public BrokerTradeSummary getBrokerTradeSummary() {
       return brokerTradeSummary;
    }
 
-   @JsonProperty("brokerTradeSummary")
+   @JsonProperty ("brokerTradeSummary")
    public void setBrokerTradeSummary(BrokerTradeSummary brokerTradeSummary) {
       this.brokerTradeSummary = brokerTradeSummary;
    }
 
-   @JsonProperty("customer")
+   @JsonProperty ("customer")
    public Customer getCustomer() {
       return customer;
    }
 
-   @JsonProperty("customer")
+   @JsonProperty ("customer")
    public void setCustomer(Customer customer) {
       this.customer = customer;
    }
 
-   @JsonProperty("firstTradableDate")
+   @JsonProperty ("firstTradableDate")
    public String getFirstTradableDate() {
       return firstTradableDate;
    }
 
-   @JsonProperty("firstTradableDate")
+   @JsonProperty ("firstTradableDate")
    public void setFirstTradableDate(String firstTradableDate) {
       this.firstTradableDate = firstTradableDate;
    }
 
-   @JsonProperty("hasInstrumentKnowledge")
+   @JsonProperty ("hasInstrumentKnowledge")
    public String getHasInstrumentKnowledge() {
       return hasInstrumentKnowledge;
    }
 
-   @JsonProperty("hasInstrumentKnowledge")
+   @JsonProperty ("hasInstrumentKnowledge")
    public void setHasInstrumentKnowledge(String hasInstrumentKnowledge) {
       this.hasInstrumentKnowledge = hasInstrumentKnowledge;
    }
 
-   @JsonProperty("hasInvestmentFees")
+   @JsonProperty ("hasInvestmentFees")
    public HasInvestmentFees getHasInvestmentFees() {
       return hasInvestmentFees;
    }
 
-   @JsonProperty("hasInvestmentFees")
+   @JsonProperty ("hasInvestmentFees")
    public void setHasInvestmentFees(HasInvestmentFees hasInvestmentFees) {
       this.hasInvestmentFees = hasInvestmentFees;
    }
 
-   @JsonProperty("hasShortSellKnowledge")
+   @JsonProperty ("hasShortSellKnowledge")
    public String getHasShortSellKnowledge() {
       return hasShortSellKnowledge;
    }
 
-   @JsonProperty("hasShortSellKnowledge")
+   @JsonProperty ("hasShortSellKnowledge")
    public void setHasShortSellKnowledge(String hasShortSellKnowledge) {
       this.hasShortSellKnowledge = hasShortSellKnowledge;
    }
 
-   @JsonProperty("lastTradableDate")
+   @JsonProperty ("lastTradableDate")
    public String getLastTradableDate() {
       return lastTradableDate;
    }
 
-   @JsonProperty("lastTradableDate")
+   @JsonProperty ("lastTradableDate")
    public void setLastTradableDate(String lastTradableDate) {
       this.lastTradableDate = lastTradableDate;
    }
 
-   @JsonProperty("latestTrades")
+   @JsonProperty ("latestTrades")
    public List<LatestTrade> getLatestTrades() {
       return latestTrades;
    }
 
-   @JsonProperty("latestTrades")
+   @JsonProperty ("latestTrades")
    public void setLatestTrades(List<LatestTrade> latestTrades) {
       this.latestTrades = latestTrades;
    }
 
-   @JsonProperty("marketMakerExpected")
+   @JsonProperty ("marketMakerExpected")
    public String getMarketMakerExpected() {
       return marketMakerExpected;
    }
 
-   @JsonProperty("marketMakerExpected")
+   @JsonProperty ("marketMakerExpected")
    public void setMarketMakerExpected(String marketMakerExpected) {
       this.marketMakerExpected = marketMakerExpected;
    }
 
-   @JsonProperty("marketTrades")
+   @JsonProperty ("marketTrades")
    public String getMarketTrades() {
       return marketTrades;
    }
 
-   @JsonProperty("marketTrades")
+   @JsonProperty ("marketTrades")
    public void setMarketTrades(String marketTrades) {
       this.marketTrades = marketTrades;
    }
 
-   @JsonProperty("order")
+   @JsonProperty ("order")
    public Order getOrder() {
       return order;
    }
 
-   @JsonProperty("order")
+   @JsonProperty ("order")
    public void setOrder(Order order) {
       this.order = order;
    }
 
-   @JsonProperty("orderDepthLevels")
+   @JsonProperty ("orderDepthLevels")
    public List<Object> getOrderDepthLevels() {
       return orderDepthLevels;
    }
 
-   @JsonProperty("orderDepthLevels")
+   @JsonProperty ("orderDepthLevels")
    public void setOrderDepthLevels(List<Object> orderDepthLevels) {
       this.orderDepthLevels = orderDepthLevels;
    }
 
-   @JsonProperty("orderDepthReceivedTime")
+   @JsonProperty ("orderDepthReceivedTime")
    public String getOrderDepthReceivedTime() {
       return orderDepthReceivedTime;
    }
 
-   @JsonProperty("orderDepthReceivedTime")
+   @JsonProperty ("orderDepthReceivedTime")
    public void setOrderDepthReceivedTime(String orderDepthReceivedTime) {
       this.orderDepthReceivedTime = orderDepthReceivedTime;
    }
 
-   @JsonProperty("orderbook")
+   @JsonProperty ("orderbook")
    public OrderBook getOrderbook() {
       return orderbook;
    }
 
-   @JsonProperty("orderbook")
+   @JsonProperty ("orderbook")
    public void setOrderbook(OrderBook orderbook) {
       this.orderbook = orderbook;
    }
 
-   @JsonProperty("tickSizeRules")
+   @JsonProperty ("tickSizeRules")
    public List<TickSizeRule> getTickSizeRules() {
       return tickSizeRules;
    }
 
-   @JsonProperty("tickSizeRules")
+   @JsonProperty ("tickSizeRules")
    public void setTickSizeRules(List<TickSizeRule> tickSizeRules) {
       this.tickSizeRules = tickSizeRules;
    }
 
-   @JsonProperty("untradableDates")
+   @JsonProperty ("untradableDates")
    public List<Object> getUntradableDates() {
       return untradableDates;
    }
 
-   @JsonProperty("untradableDates")
+   @JsonProperty ("untradableDates")
    public void setUntradableDates(List<Object> untradableDates) {
       this.untradableDates = untradableDates;
    }
-
 
    @JsonAnyGetter
    public Map<String, Object> getAdditionalProperties() {

@@ -1,47 +1,49 @@
 package org.avanza4java.Utils.totp;
 
-import java.io.*;
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class totp {
-    private static String totpKey;
-    private static String totpSecret;
-    private static final String SCRIPTPATH = "/src/main/java/org/avanza4java/Utils/totp/getTotp.py";
-    public totp(String totpKey){
-        this.totpKey = totpKey;
-        this.totpSecret = generateSecret();
-    }
+   private static final String SCRIPTPATH = "/src/main/java/org/avanza4java/Utils/totp/getTotp.py";
+   private static String totpKey;
+   private static String totpSecret;
 
-    private String generateSecret() {
-        String retVal = "";
-        String userDirectory = System.getProperty("user.dir");
-        try {
-            String[] cmd = {
-                    "python3",
-                    String.valueOf(userDirectory + SCRIPTPATH),
-                    "-t",
-                    totpKey
-            };
-            ProcessBuilder pb = new ProcessBuilder(cmd);
-            Process process = pb.start();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+   public totp(String totpKey) {
+      this.totpKey = totpKey;
+      this.totpSecret = generateSecret();
+   }
 
-            BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-            String line = "";
-            while ((line = reader.readLine()) != null) {
-                retVal = line;
-            }
-            while ((line = stdError.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+   public static String getTotpSecret() {
+      return totpSecret;
+   }
 
-        return retVal;
-    }
+   private String generateSecret() {
+      String retVal = "";
+      String userDirectory = System.getProperty("user.dir");
+      try {
+         String[] cmd = {
+                 "python3",
+                 String.valueOf(userDirectory + SCRIPTPATH),
+                 "-t",
+                 totpKey
+         };
+         ProcessBuilder pb = new ProcessBuilder(cmd);
+         Process process = pb.start();
+         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 
-    public static String getTotpSecret() {
-        return totpSecret;
-    }
+         BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+         String line = "";
+         while ((line = reader.readLine()) != null) {
+            retVal = line;
+         }
+         while ((line = stdError.readLine()) != null) {
+            System.out.println(line);
+         }
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+
+      return retVal;
+   }
 }

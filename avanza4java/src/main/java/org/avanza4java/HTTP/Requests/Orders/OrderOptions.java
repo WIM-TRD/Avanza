@@ -16,21 +16,21 @@ public class OrderOptions {
 
    public OrderOptions(String accountId, String orderbookId, OrderType orderType,
                        float price, Date validUntil, String volume) {
-      this.accountId       = accountId;
-      this.orderbookId     = orderbookId;
-      this.orderType       = orderType;
-      this.price           = price;
-      this.validUntil      = DateUtils.parseDate(validUntil);
-      this.volume          = volume;
+      this.accountId = accountId;
+      this.orderbookId = orderbookId;
+      this.orderType = orderType;
+      this.price = price;
+      this.validUntil = DateUtils.parseDate(validUntil);
+      this.volume = volume;
    }
 
    public OrderOptions(OrderOptions orderOptions) {
-      this.accountId       = orderOptions.getAccountId();
-      this.orderbookId     = orderOptions.getOrderbookId();
-      this.orderType       = orderOptions.getOrderType();
-      this.price           = orderOptions.getPrice();
-      this.validUntil      = orderOptions.getValidUntil();
-      this.volume          = orderOptions.getVolume();
+      this.accountId = orderOptions.getAccountId();
+      this.orderbookId = orderOptions.getOrderbookId();
+      this.orderType = orderOptions.getOrderType();
+      this.price = orderOptions.getPrice();
+      this.validUntil = orderOptions.getValidUntil();
+      this.volume = orderOptions.getVolume();
 
    }
 

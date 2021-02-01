@@ -1,45 +1,42 @@
 package org.avanza4java.HTTP.Responses.OrderBook;
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import com.fasterxml.jackson.annotation.*;
 import org.avanza4java.HTTP.Responses.Account.Account;
 import org.avanza4java.HTTP.Responses.InstrumentInfo.Fund.Fund;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+import java.util.HashMap;
+import java.util.Map;
+
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "account",
         "fund"
 })
 public class OrderBookInfo {
 
-   @JsonProperty("account")
+   @JsonProperty ("account")
    private Account account;
-   @JsonProperty("fund")
+   @JsonProperty ("fund")
    private Fund fund;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("account")
+   @JsonProperty ("account")
    public Account getAccount() {
       return account;
    }
 
-   @JsonProperty("account")
+   @JsonProperty ("account")
    public void setAccount(Account account) {
       this.account = account;
    }
 
-   @JsonProperty("fund")
+   @JsonProperty ("fund")
    public Fund getFund() {
       return fund;
    }
 
-   @JsonProperty("fund")
+   @JsonProperty ("fund")
    public void setFund(Fund fund) {
       this.fund = fund;
    }

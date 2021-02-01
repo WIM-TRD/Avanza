@@ -1,46 +1,41 @@
 package org.avanza4java.HTTP.Responses.Transaction;
 
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "otherTransactionsGroups",
         "total"
 })
 public class OtherTransactions {
 
-   @JsonProperty("otherTransactionsGroups")
+   @JsonProperty ("otherTransactionsGroups")
    private List<Object> otherTransactionsGroups = null;
-   @JsonProperty("total")
+   @JsonProperty ("total")
    private String total;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("otherTransactionsGroups")
+   @JsonProperty ("otherTransactionsGroups")
    public List<Object> getOtherTransactionsGroups() {
       return otherTransactionsGroups;
    }
 
-   @JsonProperty("otherTransactionsGroups")
+   @JsonProperty ("otherTransactionsGroups")
    public void setOtherTransactionsGroups(List<Object> otherTransactionsGroups) {
       this.otherTransactionsGroups = otherTransactionsGroups;
    }
 
-   @JsonProperty("total")
+   @JsonProperty ("total")
    public String getTotal() {
       return total;
    }
 
-   @JsonProperty("total")
+   @JsonProperty ("total")
    public void setTotal(String total) {
       this.total = total;
    }

@@ -9,8 +9,8 @@ public class EditOrder extends OrderOptions {
 
    public EditOrder(String instrumentType, String orderId, OrderOptions orderOptions) {
       super(orderOptions);
-      this.instrumentType  = instrumentType;
-      this.orderId         = orderId;
+      this.instrumentType = instrumentType;
+      this.orderId = orderId;
    }
 
    public JsonObject toJson() {

@@ -1,22 +1,17 @@
 package org.avanza4java.HTTP.Responses.InstrumentInfo;
 
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 import org.avanza4java.HTTP.Responses.Outcome.Outcome;
 import org.avanza4java.HTTP.Responses.Outcome.TotalOutcome;
 import org.avanza4java.HTTP.Responses.Outcome.TotalOutcomeForUnknownDevelopments;
 import org.avanza4java.HTTP.Responses.Positions.Position;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "instrumentDisplayName",
         "instrumentType",
         "outcome",
@@ -27,89 +22,89 @@ import org.avanza4java.HTTP.Responses.Positions.Position;
 })
 public class Instrument {
 
-   @JsonProperty("instrumentDisplayName")
+   @JsonProperty ("instrumentDisplayName")
    private String instrumentDisplayName;
-   @JsonProperty("instrumentType")
+   @JsonProperty ("instrumentType")
    private String instrumentType;
-   @JsonProperty("outcome")
+   @JsonProperty ("outcome")
    private Outcome outcome;
-   @JsonProperty("positions")
+   @JsonProperty ("positions")
    private List<Position> positions = null;
-   @JsonProperty("totalOutcome")
+   @JsonProperty ("totalOutcome")
    private TotalOutcome totalOutcome;
-   @JsonProperty("totalOutcomeForUnknownDevelopments")
+   @JsonProperty ("totalOutcomeForUnknownDevelopments")
    private TotalOutcomeForUnknownDevelopments totalOutcomeForUnknownDevelopments;
-   @JsonProperty("unknownPositionDevelopments")
+   @JsonProperty ("unknownPositionDevelopments")
    private List<Object> unknownPositionDevelopments = null;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("instrumentDisplayName")
+   @JsonProperty ("instrumentDisplayName")
    public String getInstrumentDisplayName() {
       return instrumentDisplayName;
    }
 
-   @JsonProperty("instrumentDisplayName")
+   @JsonProperty ("instrumentDisplayName")
    public void setInstrumentDisplayName(String instrumentDisplayName) {
       this.instrumentDisplayName = instrumentDisplayName;
    }
 
-   @JsonProperty("instrumentType")
+   @JsonProperty ("instrumentType")
    public String getInstrumentType() {
       return instrumentType;
    }
 
-   @JsonProperty("instrumentType")
+   @JsonProperty ("instrumentType")
    public void setInstrumentType(String instrumentType) {
       this.instrumentType = instrumentType;
    }
 
-   @JsonProperty("outcome")
+   @JsonProperty ("outcome")
    public Outcome getOutcome() {
       return outcome;
    }
 
-   @JsonProperty("outcome")
+   @JsonProperty ("outcome")
    public void setOutcome(Outcome outcome) {
       this.outcome = outcome;
    }
 
-   @JsonProperty("positions")
+   @JsonProperty ("positions")
    public List<Position> getPositions() {
       return positions;
    }
 
-   @JsonProperty("positions")
+   @JsonProperty ("positions")
    public void setPositions(List<Position> positions) {
       this.positions = positions;
    }
 
-   @JsonProperty("totalOutcome")
+   @JsonProperty ("totalOutcome")
    public TotalOutcome getTotalOutcome() {
       return totalOutcome;
    }
 
-   @JsonProperty("totalOutcome")
+   @JsonProperty ("totalOutcome")
    public void setTotalOutcome(TotalOutcome totalOutcome) {
       this.totalOutcome = totalOutcome;
    }
 
-   @JsonProperty("totalOutcomeForUnknownDevelopments")
+   @JsonProperty ("totalOutcomeForUnknownDevelopments")
    public TotalOutcomeForUnknownDevelopments getTotalOutcomeForUnknownDevelopments() {
       return totalOutcomeForUnknownDevelopments;
    }
 
-   @JsonProperty("totalOutcomeForUnknownDevelopments")
+   @JsonProperty ("totalOutcomeForUnknownDevelopments")
    public void setTotalOutcomeForUnknownDevelopments(TotalOutcomeForUnknownDevelopments totalOutcomeForUnknownDevelopments) {
       this.totalOutcomeForUnknownDevelopments = totalOutcomeForUnknownDevelopments;
    }
 
-   @JsonProperty("unknownPositionDevelopments")
+   @JsonProperty ("unknownPositionDevelopments")
    public List<Object> getUnknownPositionDevelopments() {
       return unknownPositionDevelopments;
    }
 
-   @JsonProperty("unknownPositionDevelopments")
+   @JsonProperty ("unknownPositionDevelopments")
    public void setUnknownPositionDevelopments(List<Object> unknownPositionDevelopments) {
       this.unknownPositionDevelopments = unknownPositionDevelopments;
    }

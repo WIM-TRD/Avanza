@@ -1,57 +1,53 @@
 package org.avanza4java.HTTP.Responses.Transaction.Activity;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "percent",
         "price",
         "volume"
 })
 public class Buy {
 
-   @JsonProperty("percent")
+   @JsonProperty ("percent")
    private String percent;
-   @JsonProperty("price")
+   @JsonProperty ("price")
    private String price;
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    private String volume;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("percent")
+   @JsonProperty ("percent")
    public String getPercent() {
       return percent;
    }
 
-   @JsonProperty("percent")
+   @JsonProperty ("percent")
    public void setPercent(String percent) {
       this.percent = percent;
    }
 
-   @JsonProperty("price")
+   @JsonProperty ("price")
    public String getPrice() {
       return price;
    }
 
-   @JsonProperty("price")
+   @JsonProperty ("price")
    public void setPrice(String price) {
       this.price = price;
    }
 
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    public String getVolume() {
       return volume;
    }
 
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    public void setVolume(String volume) {
       this.volume = volume;
    }

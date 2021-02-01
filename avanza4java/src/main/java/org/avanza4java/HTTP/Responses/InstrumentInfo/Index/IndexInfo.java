@@ -1,16 +1,12 @@
 package org.avanza4java.HTTP.Responses.InstrumentInfo.Index;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "change",
         "changePercent",
         "currency",
@@ -37,281 +33,281 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class IndexInfo {
 
-   @JsonProperty("change")
+   @JsonProperty ("change")
    private String change;
-   @JsonProperty("changePercent")
+   @JsonProperty ("changePercent")
    private String changePercent;
-   @JsonProperty("currency")
+   @JsonProperty ("currency")
    private String currency;
-   @JsonProperty("description")
+   @JsonProperty ("description")
    private String description;
-   @JsonProperty("flagCode")
+   @JsonProperty ("flagCode")
    private String flagCode;
-   @JsonProperty("highestPrice")
+   @JsonProperty ("highestPrice")
    private String highestPrice;
-   @JsonProperty("id")
+   @JsonProperty ("id")
    private String id;
-   @JsonProperty("lastPrice")
+   @JsonProperty ("lastPrice")
    private String lastPrice;
-   @JsonProperty("lastPriceUpdated")
+   @JsonProperty ("lastPriceUpdated")
    private String lastPriceUpdated;
-   @JsonProperty("lowestPrice")
+   @JsonProperty ("lowestPrice")
    private String lowestPrice;
-   @JsonProperty("name")
+   @JsonProperty ("name")
    private String name;
-   @JsonProperty("numberOfPriceAlerts")
+   @JsonProperty ("numberOfPriceAlerts")
    private String numberOfPriceAlerts;
-   @JsonProperty("priceAtStartOfYear")
+   @JsonProperty ("priceAtStartOfYear")
    private String priceAtStartOfYear;
-   @JsonProperty("priceFiveYearsAgo")
+   @JsonProperty ("priceFiveYearsAgo")
    private String priceFiveYearsAgo;
-   @JsonProperty("priceOneMonthAgo")
+   @JsonProperty ("priceOneMonthAgo")
    private String priceOneMonthAgo;
-   @JsonProperty("priceOneWeekAgo")
+   @JsonProperty ("priceOneWeekAgo")
    private String priceOneWeekAgo;
-   @JsonProperty("priceOneYearAgo")
+   @JsonProperty ("priceOneYearAgo")
    private String priceOneYearAgo;
-   @JsonProperty("priceSixMonthsAgo")
+   @JsonProperty ("priceSixMonthsAgo")
    private String priceSixMonthsAgo;
-   @JsonProperty("priceThreeMonthsAgo")
+   @JsonProperty ("priceThreeMonthsAgo")
    private String priceThreeMonthsAgo;
-   @JsonProperty("priceThreeYearsAgo")
+   @JsonProperty ("priceThreeYearsAgo")
    private String priceThreeYearsAgo;
-   @JsonProperty("pushPermitted")
+   @JsonProperty ("pushPermitted")
    private String pushPermitted;
-   @JsonProperty("quoteUpdated")
+   @JsonProperty ("quoteUpdated")
    private String quoteUpdated;
-   @JsonProperty("title")
+   @JsonProperty ("title")
    private String title;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("change")
+   @JsonProperty ("change")
    public String getChange() {
       return change;
    }
 
-   @JsonProperty("change")
+   @JsonProperty ("change")
    public void setChange(String change) {
       this.change = change;
    }
 
-   @JsonProperty("changePercent")
+   @JsonProperty ("changePercent")
    public String getChangePercent() {
       return changePercent;
    }
 
-   @JsonProperty("changePercent")
+   @JsonProperty ("changePercent")
    public void setChangePercent(String changePercent) {
       this.changePercent = changePercent;
    }
 
-   @JsonProperty("currency")
+   @JsonProperty ("currency")
    public String getCurrency() {
       return currency;
    }
 
-   @JsonProperty("currency")
+   @JsonProperty ("currency")
    public void setCurrency(String currency) {
       this.currency = currency;
    }
 
-   @JsonProperty("description")
+   @JsonProperty ("description")
    public String getDescription() {
       return description;
    }
 
-   @JsonProperty("description")
+   @JsonProperty ("description")
    public void setDescription(String description) {
       this.description = description;
    }
 
-   @JsonProperty("flagCode")
+   @JsonProperty ("flagCode")
    public String getFlagCode() {
       return flagCode;
    }
 
-   @JsonProperty("flagCode")
+   @JsonProperty ("flagCode")
    public void setFlagCode(String flagCode) {
       this.flagCode = flagCode;
    }
 
-   @JsonProperty("highestPrice")
+   @JsonProperty ("highestPrice")
    public String getHighestPrice() {
       return highestPrice;
    }
 
-   @JsonProperty("highestPrice")
+   @JsonProperty ("highestPrice")
    public void setHighestPrice(String highestPrice) {
       this.highestPrice = highestPrice;
    }
 
-   @JsonProperty("id")
+   @JsonProperty ("id")
    public String getId() {
       return id;
    }
 
-   @JsonProperty("id")
+   @JsonProperty ("id")
    public void setId(String id) {
       this.id = id;
    }
 
-   @JsonProperty("lastPrice")
+   @JsonProperty ("lastPrice")
    public String getLastPrice() {
       return lastPrice;
    }
 
-   @JsonProperty("lastPrice")
+   @JsonProperty ("lastPrice")
    public void setLastPrice(String lastPrice) {
       this.lastPrice = lastPrice;
    }
 
-   @JsonProperty("lastPriceUpdated")
+   @JsonProperty ("lastPriceUpdated")
    public String getLastPriceUpdated() {
       return lastPriceUpdated;
    }
 
-   @JsonProperty("lastPriceUpdated")
+   @JsonProperty ("lastPriceUpdated")
    public void setLastPriceUpdated(String lastPriceUpdated) {
       this.lastPriceUpdated = lastPriceUpdated;
    }
 
-   @JsonProperty("lowestPrice")
+   @JsonProperty ("lowestPrice")
    public String getLowestPrice() {
       return lowestPrice;
    }
 
-   @JsonProperty("lowestPrice")
+   @JsonProperty ("lowestPrice")
    public void setLowestPrice(String lowestPrice) {
       this.lowestPrice = lowestPrice;
    }
 
-   @JsonProperty("name")
+   @JsonProperty ("name")
    public String getName() {
       return name;
    }
 
-   @JsonProperty("name")
+   @JsonProperty ("name")
    public void setName(String name) {
       this.name = name;
    }
 
-   @JsonProperty("numberOfPriceAlerts")
+   @JsonProperty ("numberOfPriceAlerts")
    public String getNumberOfPriceAlerts() {
       return numberOfPriceAlerts;
    }
 
-   @JsonProperty("numberOfPriceAlerts")
+   @JsonProperty ("numberOfPriceAlerts")
    public void setNumberOfPriceAlerts(String numberOfPriceAlerts) {
       this.numberOfPriceAlerts = numberOfPriceAlerts;
    }
 
-   @JsonProperty("priceAtStartOfYear")
+   @JsonProperty ("priceAtStartOfYear")
    public String getPriceAtStartOfYear() {
       return priceAtStartOfYear;
    }
 
-   @JsonProperty("priceAtStartOfYear")
+   @JsonProperty ("priceAtStartOfYear")
    public void setPriceAtStartOfYear(String priceAtStartOfYear) {
       this.priceAtStartOfYear = priceAtStartOfYear;
    }
 
-   @JsonProperty("priceFiveYearsAgo")
+   @JsonProperty ("priceFiveYearsAgo")
    public String getPriceFiveYearsAgo() {
       return priceFiveYearsAgo;
    }
 
-   @JsonProperty("priceFiveYearsAgo")
+   @JsonProperty ("priceFiveYearsAgo")
    public void setPriceFiveYearsAgo(String priceFiveYearsAgo) {
       this.priceFiveYearsAgo = priceFiveYearsAgo;
    }
 
-   @JsonProperty("priceOneMonthAgo")
+   @JsonProperty ("priceOneMonthAgo")
    public String getPriceOneMonthAgo() {
       return priceOneMonthAgo;
    }
 
-   @JsonProperty("priceOneMonthAgo")
+   @JsonProperty ("priceOneMonthAgo")
    public void setPriceOneMonthAgo(String priceOneMonthAgo) {
       this.priceOneMonthAgo = priceOneMonthAgo;
    }
 
-   @JsonProperty("priceOneWeekAgo")
+   @JsonProperty ("priceOneWeekAgo")
    public String getPriceOneWeekAgo() {
       return priceOneWeekAgo;
    }
 
-   @JsonProperty("priceOneWeekAgo")
+   @JsonProperty ("priceOneWeekAgo")
    public void setPriceOneWeekAgo(String priceOneWeekAgo) {
       this.priceOneWeekAgo = priceOneWeekAgo;
    }
 
-   @JsonProperty("priceOneYearAgo")
+   @JsonProperty ("priceOneYearAgo")
    public String getPriceOneYearAgo() {
       return priceOneYearAgo;
    }
 
-   @JsonProperty("priceOneYearAgo")
+   @JsonProperty ("priceOneYearAgo")
    public void setPriceOneYearAgo(String priceOneYearAgo) {
       this.priceOneYearAgo = priceOneYearAgo;
    }
 
-   @JsonProperty("priceSixMonthsAgo")
+   @JsonProperty ("priceSixMonthsAgo")
    public String getPriceSixMonthsAgo() {
       return priceSixMonthsAgo;
    }
 
-   @JsonProperty("priceSixMonthsAgo")
+   @JsonProperty ("priceSixMonthsAgo")
    public void setPriceSixMonthsAgo(String priceSixMonthsAgo) {
       this.priceSixMonthsAgo = priceSixMonthsAgo;
    }
 
-   @JsonProperty("priceThreeMonthsAgo")
+   @JsonProperty ("priceThreeMonthsAgo")
    public String getPriceThreeMonthsAgo() {
       return priceThreeMonthsAgo;
    }
 
-   @JsonProperty("priceThreeMonthsAgo")
+   @JsonProperty ("priceThreeMonthsAgo")
    public void setPriceThreeMonthsAgo(String priceThreeMonthsAgo) {
       this.priceThreeMonthsAgo = priceThreeMonthsAgo;
    }
 
-   @JsonProperty("priceThreeYearsAgo")
+   @JsonProperty ("priceThreeYearsAgo")
    public String getPriceThreeYearsAgo() {
       return priceThreeYearsAgo;
    }
 
-   @JsonProperty("priceThreeYearsAgo")
+   @JsonProperty ("priceThreeYearsAgo")
    public void setPriceThreeYearsAgo(String priceThreeYearsAgo) {
       this.priceThreeYearsAgo = priceThreeYearsAgo;
    }
 
-   @JsonProperty("pushPermitted")
+   @JsonProperty ("pushPermitted")
    public String getPushPermitted() {
       return pushPermitted;
    }
 
-   @JsonProperty("pushPermitted")
+   @JsonProperty ("pushPermitted")
    public void setPushPermitted(String pushPermitted) {
       this.pushPermitted = pushPermitted;
    }
 
-   @JsonProperty("quoteUpdated")
+   @JsonProperty ("quoteUpdated")
    public String getQuoteUpdated() {
       return quoteUpdated;
    }
 
-   @JsonProperty("quoteUpdated")
+   @JsonProperty ("quoteUpdated")
    public void setQuoteUpdated(String quoteUpdated) {
       this.quoteUpdated = quoteUpdated;
    }
 
-   @JsonProperty("title")
+   @JsonProperty ("title")
    public String getTitle() {
       return title;
    }
 
-   @JsonProperty("title")
+   @JsonProperty ("title")
    public void setTitle(String title) {
       this.title = title;
    }

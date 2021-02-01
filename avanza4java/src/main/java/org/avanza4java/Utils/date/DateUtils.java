@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class DateUtils {
-   public static String parseDate(Date date){
+   public static String parseDate(Date date) {
       String retVal = "";
       LocalDateTime ldt = LocalDateTime.now();
       retVal = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.GERMANY).format(ldt);

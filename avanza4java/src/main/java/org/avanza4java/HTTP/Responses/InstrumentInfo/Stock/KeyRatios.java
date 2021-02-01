@@ -1,58 +1,53 @@
 package org.avanza4java.HTTP.Responses.InstrumentInfo.Stock;
 
+import com.fasterxml.jackson.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "directYield",
         "priceEarningsRatio",
         "volatility"
 })
 public class KeyRatios {
 
-   @JsonProperty("directYield")
+   @JsonProperty ("directYield")
    private String directYield;
-   @JsonProperty("priceEarningsRatio")
+   @JsonProperty ("priceEarningsRatio")
    private String priceEarningsRatio;
-   @JsonProperty("volatility")
+   @JsonProperty ("volatility")
    private String volatility;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("directYield")
+   @JsonProperty ("directYield")
    public String getDirectYield() {
       return directYield;
    }
 
-   @JsonProperty("directYield")
+   @JsonProperty ("directYield")
    public void setDirectYield(String directYield) {
       this.directYield = directYield;
    }
 
-   @JsonProperty("priceEarningsRatio")
+   @JsonProperty ("priceEarningsRatio")
    public String getPriceEarningsRatio() {
       return priceEarningsRatio;
    }
 
-   @JsonProperty("priceEarningsRatio")
+   @JsonProperty ("priceEarningsRatio")
    public void setPriceEarningsRatio(String priceEarningsRatio) {
       this.priceEarningsRatio = priceEarningsRatio;
    }
 
-   @JsonProperty("volatility")
+   @JsonProperty ("volatility")
    public String getVolatility() {
       return volatility;
    }
 
-   @JsonProperty("volatility")
+   @JsonProperty ("volatility")
    public void setVolatility(String volatility) {
       this.volatility = volatility;
    }

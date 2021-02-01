@@ -1,18 +1,14 @@
 package org.avanza4java.HTTP.Responses.Transaction;
 
+import com.fasterxml.jackson.annotation.*;
+import org.avanza4java.HTTP.Responses.Charts.ChartDatum;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import org.avanza4java.HTTP.Responses.Charts.ChartDatum;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "allTransactions",
         "chartData",
         "totalAll",
@@ -22,77 +18,77 @@ import org.avanza4java.HTTP.Responses.Charts.ChartDatum;
 })
 public class TransactionsResponse {
 
-   @JsonProperty("allTransactions")
+   @JsonProperty ("allTransactions")
    private List<AllTransaction> allTransactions = null;
-   @JsonProperty("chartData")
+   @JsonProperty ("chartData")
    private List<ChartDatum> chartData = null;
-   @JsonProperty("totalAll")
+   @JsonProperty ("totalAll")
    private String totalAll;
-   @JsonProperty("totalAutogiro")
+   @JsonProperty ("totalAutogiro")
    private String totalAutogiro;
-   @JsonProperty("totalDeposits")
+   @JsonProperty ("totalDeposits")
    private String totalDeposits;
-   @JsonProperty("totalWithdraws")
+   @JsonProperty ("totalWithdraws")
    private String totalWithdraws;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("allTransactions")
+   @JsonProperty ("allTransactions")
    public List<AllTransaction> getAllTransactions() {
       return allTransactions;
    }
 
-   @JsonProperty("allTransactions")
+   @JsonProperty ("allTransactions")
    public void setAllTransactions(List<AllTransaction> allTransactions) {
       this.allTransactions = allTransactions;
    }
 
-   @JsonProperty("chartData")
+   @JsonProperty ("chartData")
    public List<ChartDatum> getChartData() {
       return chartData;
    }
 
-   @JsonProperty("chartData")
+   @JsonProperty ("chartData")
    public void setChartData(List<ChartDatum> chartData) {
       this.chartData = chartData;
    }
 
-   @JsonProperty("totalAll")
+   @JsonProperty ("totalAll")
    public String getTotalAll() {
       return totalAll;
    }
 
-   @JsonProperty("totalAll")
+   @JsonProperty ("totalAll")
    public void setTotalAll(String totalAll) {
       this.totalAll = totalAll;
    }
 
-   @JsonProperty("totalAutogiro")
+   @JsonProperty ("totalAutogiro")
    public String getTotalAutogiro() {
       return totalAutogiro;
    }
 
-   @JsonProperty("totalAutogiro")
+   @JsonProperty ("totalAutogiro")
    public void setTotalAutogiro(String totalAutogiro) {
       this.totalAutogiro = totalAutogiro;
    }
 
-   @JsonProperty("totalDeposits")
+   @JsonProperty ("totalDeposits")
    public String getTotalDeposits() {
       return totalDeposits;
    }
 
-   @JsonProperty("totalDeposits")
+   @JsonProperty ("totalDeposits")
    public void setTotalDeposits(String totalDeposits) {
       this.totalDeposits = totalDeposits;
    }
 
-   @JsonProperty("totalWithdraws")
+   @JsonProperty ("totalWithdraws")
    public String getTotalWithdraws() {
       return totalWithdraws;
    }
 
-   @JsonProperty("totalWithdraws")
+   @JsonProperty ("totalWithdraws")
    public void setTotalWithdraws(String totalWithdraws) {
       this.totalWithdraws = totalWithdraws;
    }

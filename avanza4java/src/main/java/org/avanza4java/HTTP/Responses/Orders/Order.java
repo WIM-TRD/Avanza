@@ -1,18 +1,13 @@
 package org.avanza4java.HTTP.Responses.Orders;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 import org.avanza4java.HTTP.Responses.Account.AccountSimple;
 import org.avanza4java.HTTP.Responses.OrderBook.OrderBook;
 import org.avanza4java.HTTP.Responses.Transaction.TransactionFees;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @JsonInclude (JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder ({
@@ -274,26 +269,26 @@ public class Order {
    public void setVisibleOnAccountDate(String visibleOnAccountDate) {
       this.visibleOnAccountDate = visibleOnAccountDate;
    }
-   @JsonProperty("validUntil")
+
+   @JsonProperty ("validUntil")
    public String getValidUntil() {
       return validUntil;
    }
 
-   @JsonProperty("validUntil")
+   @JsonProperty ("validUntil")
    public void setValidUntil(String validUntil) {
       this.validUntil = validUntil;
    }
 
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    public String getVolume() {
       return volume;
    }
 
-   @JsonProperty("volume")
+   @JsonProperty ("volume")
    public void setVolume(String volume) {
       this.volume = volume;
    }
-
 
    @JsonAnyGetter
    public Map<String, Object> getAdditionalProperties() {

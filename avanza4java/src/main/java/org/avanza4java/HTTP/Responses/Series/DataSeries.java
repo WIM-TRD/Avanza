@@ -1,43 +1,40 @@
 package org.avanza4java.HTTP.Responses.Series;
+
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashMap;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonInclude (JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder ({
         "timestamp",
         "value"
 })
 public class DataSeries {
 
-   @JsonProperty("timestamp")
+   @JsonProperty ("timestamp")
    private String timestamp;
-   @JsonProperty("value")
+   @JsonProperty ("value")
    private String value;
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-   @JsonProperty("timestamp")
+   @JsonProperty ("timestamp")
    public String getTimestamp() {
       return timestamp;
    }
 
-   @JsonProperty("timestamp")
+   @JsonProperty ("timestamp")
    public void setTimestamp(String timestamp) {
       this.timestamp = timestamp;
    }
 
-   @JsonProperty("value")
+   @JsonProperty ("value")
    public String getValue() {
       return value;
    }
 
-   @JsonProperty("value")
+   @JsonProperty ("value")
    public void setValue(String value) {
       this.value = value;
    }
