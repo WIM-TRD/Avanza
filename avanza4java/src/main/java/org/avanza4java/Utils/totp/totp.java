@@ -4,8 +4,9 @@ import java.io.*;
 import java.util.List;
 
 public class totp {
-    public static String totpKey;
-    public static String totpSecret;
+    private static String totpKey;
+    private static String totpSecret;
+    private static final String SCRIPTPATH = "/src/main/java/org/avanza4java/Utils/totp/getTotp.py";
     public totp(String totpKey){
         this.totpKey = totpKey;
         this.totpSecret = generateSecret();
@@ -13,11 +14,11 @@ public class totp {
 
     private String generateSecret() {
         String retVal = "";
-        List command;
+        String userDirectory = System.getProperty("user.dir");
         try {
             String[] cmd = {
                     "python3",
-                    "/home/wim/git/wtrader/domain/src/main/java/org/wTrader/utils/AvanzaAPI/Utils/totp/getTotp.py",
+                    String.valueOf(userDirectory + SCRIPTPATH),
                     "-t",
                     totpKey
             };

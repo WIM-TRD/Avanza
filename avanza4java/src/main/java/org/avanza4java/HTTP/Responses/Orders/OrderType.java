@@ -1,4 +1,5 @@
 package org.avanza4java.HTTP.Responses.Orders;
 
-public class OrderType {
+public enum OrderType {
+   BUY, SELL
 }

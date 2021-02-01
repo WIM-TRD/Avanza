@@ -8,7 +8,6 @@ import java.util.Date;
 
 public class OrderOptions {
    private String accountId;
-
    private String orderbookId;
    private OrderType orderType;
    private float price;
