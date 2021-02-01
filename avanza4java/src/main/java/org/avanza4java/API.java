@@ -1,0 +1,135 @@
+package org.avanza4java;
+
+
+import org.avanza4java.Config.Constants;
+import org.avanza4java.HTTP.HTTPMethod;
+import org.avanza4java.HTTP.Requests.Authentication.LoginRequest;
+import org.avanza4java.HTTP.Requests.Authentication.TotpRequest;
+import org.avanza4java.HTTP.Requests.Orders.EditOrder;
+import org.avanza4java.HTTP.Requests.Orders.OrderOptions;
+import org.avanza4java.HTTP.Responses.Account.AccountOverview;
+import org.avanza4java.HTTP.Responses.Account.Overview;
+import org.avanza4java.HTTP.Responses.Authentication.LoginResponse;
+import org.avanza4java.HTTP.Responses.Authentication.TotpResponse;
+import org.avanza4java.HTTP.Responses.Deals.DealsAndOrders;
+import org.avanza4java.HTTP.Responses.HTTPResponse;
+import org.avanza4java.HTTP.Responses.Insight.InsightReport;
+import org.avanza4java.HTTP.Responses.InstrumentInfo.InstrumentType;
+import org.avanza4java.HTTP.Responses.OrderBook.OrderBookInfo;
+import org.avanza4java.HTTP.Responses.Orders.Order;
+import org.avanza4java.HTTP.Responses.Positions.HeldPositions;
+import org.avanza4java.Utils.totp.totp;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+import static java.util.Collections.singletonMap;
+
+public class API {
+   private final ApiClient apiClient;
+   private String username;
+   private String password;
+   private String totp;
+   private String totpSecret;
+   private Map<String, String> headers = new HashMap<>();
+
+   public API(String username, String password, String totp) {
+      this.username = username;
+      this.password = password;
+      this.totp = totp;
+      this.apiClient = CreateClient();
+      this.totpSecret = getTotpSecret();
+   }
+
+   private ApiClient CreateClient() {
+      return new ApiClient(username, password, totp);
+   }
+
+   public boolean login() {
+      boolean loginSucessful = false;
+      LoginRequest loginRequest = new LoginRequest(Constants.maxInactiveMinutes, username, password);
+      LoginResponse response = apiClient.request(
+              HTTPMethod.POST,
+              Collections.emptyMap(),
+              loginRequest.toJSON(),
+              Constants.AUTHENTICATION_PATH,
+              LoginResponse.class).getBody();
+      if (response.getTwoFactorLogin().getMethod() != null) {
+         TotpRequest totpRequest = new TotpRequest();
+         totpRequest.setMethod(response.getTwoFactorLogin().getMethod());
+         totpRequest.setTotpSecret(totpSecret);
+         HTTPResponse<TotpResponse> totpResponse = apiClient.request(
+                 HTTPMethod.POST,
+                 singletonMap(Constants.COOKIE, String.format("AZAMFATRANSACTION=%s", response.getTwoFactorLogin().getTransactionId())),
+                 totpRequest.toJSON(),
+                 Constants.TOTP_PATH,
+                 TotpResponse.class);
+
+         if (totpResponse.getBody() != null &&
+             totpResponse.getBody().getAuthenticationSession() != null) {
+            apiClient.setAuthenticated();
+            this.headers.put(Constants.AUTHENTICATIONSESSION, totpResponse.getBody().getAuthenticationSession());
+            this.headers.put(Constants.SECURITYTOKEN, totpResponse.getHeaders().get(Constants.SECURITYTOKEN));
+            loginSucessful = true;
+         } else {
+            throw new RuntimeException("Login not successful");
+         }
+      }
+      return loginSucessful;
+   }
+
+   public String getTotpSecret() {
+      org.avanza4java.Utils.totp.totp retVal = new totp(totp);
+      return retVal.getTotpSecret();
+   }
+
+   public Overview getOverview() {
+      return (apiClient.call(HTTPMethod.GET, headers, null,
+                             Constants.OVERVIEW_PATH, Overview.class).getBody());
+   }
+
+   public AccountOverview getAccountOverview(String accountId) {
+      return (apiClient.call(HTTPMethod.GET, headers, null,
+                             Constants.ACCOUNT_OVERVIEW_PATH.replace("{0}", accountId), AccountOverview.class).getBody());
+   }
+
+   public DealsAndOrders getDealsAndOrders(){
+      return(apiClient.call(HTTPMethod.GET, headers, null,
+                            Constants.DEALS_AND_ORDERS_PATH, DealsAndOrders.class).getBody());
+   }
+
+   public HeldPositions getPositions() {
+      return(apiClient.call(HTTPMethod.GET, headers, null,
+                            Constants.POSITIONS_PATH, HeldPositions.class).getBody());
+   }
+
+   public Order placeOrder(OrderOptions orderOptions){
+      return(apiClient.call(HTTPMethod.POST, headers, orderOptions.toJson(),
+                     Constants.ORDER_PLACE_DELETE_PATH, Order.class).getBody());
+   }
+
+   public Order editOrder(EditOrder editOrderOptions){
+      return(apiClient.call(HTTPMethod.PUT, headers, editOrderOptions.toJson(),
+                            editOrderOptions.getEditOrderExtension(), Order.class).getBody());
+   }
+
+   public OrderBookInfo getOrderbookinfo(String orderbookId, InstrumentType instrumentType){
+      return(apiClient.call(HTTPMethod.GET, headers, null,
+                            Constants.ORDERBOOK_PATH
+                                    .replace("{0}", instrumentType.toString())
+                                    .replace("{1}", orderbookId)
+                           ,OrderBookInfo.class).getBody());
+   }
+
+   public InsightReport getInsightReport(String accountId, String timePeriod){
+      return(apiClient.call(HTTPMethod.GET, headers, null,
+                            Constants.INSIGHTS_PATH
+                              .replace("{0}", timePeriod)
+                              .replace("{1}", accountId)
+                           ,InsightReport.class).getBody());
+   }
+
+
+
+}
