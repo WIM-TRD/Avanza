@@ -46,7 +46,7 @@ public class API {
    }
 
    public boolean login() {
-      boolean loginSucessful = false;
+      boolean loginSuccessful = false;
       LoginRequest loginRequest = new LoginRequest(Constants.maxInactiveMinutes, username, password);
       LoginResponse response = apiClient.request(
               HTTPMethod.POST,
@@ -70,12 +70,12 @@ public class API {
             apiClient.setAuthenticated();
             this.headers.put(Constants.AUTHENTICATIONSESSION, totpResponse.getBody().getAuthenticationSession());
             this.headers.put(Constants.SECURITYTOKEN, totpResponse.getHeaders().get(Constants.SECURITYTOKEN));
-            loginSucessful = true;
+            loginSuccessful = true;
          } else {
             throw new RuntimeException("Login not successful");
          }
       }
-      return loginSucessful;
+      return loginSuccessful;
    }
 
    public String getTotpSecret() {
