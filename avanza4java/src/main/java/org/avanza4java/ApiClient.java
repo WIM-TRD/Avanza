@@ -53,7 +53,6 @@ public class ApiClient {
 
    synchronized <T> HTTPResponse<T> request(HTTPMethod httpMethod, Map<String, String> headers,
                                             JsonObject data, String urlExtension, Class<T> responseType) {
-      LOGGER.debug("Expected response {}", responseType.getName());
       HTTPResponse retVal = new HTTPResponse<>();
       headers = new HashMap<>(ofNullable(headers).orElseGet(HashMap :: new));
       headers.put("Accept", "*/*");
@@ -66,7 +65,6 @@ public class ApiClient {
          avanzaConnection.setRequestMethod(httpMethod.getHttpMethod());
          headers.forEach(avanzaConnection :: setRequestProperty);
          if (data != null) {
-            LOGGER.debug(data.toString());
             avanzaConnection.setRequestProperty("Content-Length", String.valueOf(data.size()));
             avanzaConnection.setDoOutput(true);
             IOUtils.write(String.valueOf(data), avanzaConnection.getOutputStream(), StandardCharsets.UTF_8);
@@ -86,12 +84,8 @@ public class ApiClient {
                     getResponseHeaders(avanzaConnection.getHeaderFields()),
                     gson.fromJson(jsonObject.toString(), responseType)
             );
-            //TODO: Remove LOGGER.
-            LOGGER.debug("Response ---HEAD--- {} ---BODY--- {} ------ {}",
-                         avanzaConnection.getHeaderFields(),
-                         responseBody, avanzaConnection.getResponseMessage());
          } else {
-            LOGGER.warn("Request to {} failed with error code {}---BODY---{} ----{}",
+            LOGGER.warn("Request to {} failed with error code {}---{}---{}",
                         avanzaConnection.getURL().toString(), responseCode, responseBody, avanzaConnection.getResponseMessage());
          }
       } catch (MalformedURLException e) {
