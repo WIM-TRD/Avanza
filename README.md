@@ -1,4 +1,4 @@
-# AvanzaForJava
+# Avanza
 Controller for the unofficial Avanza API created only for the purpose of learning Java. 
 Project is inspired by existing project - [fhqvst - Avanza](https://github.com/fhqvst/avanza).
 
