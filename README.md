@@ -3,7 +3,7 @@ Controller for the unofficial Avanza API created only for the purpose of learnin
 Project is inspired by existing project - [fhqvst - Avanza](https://github.com/fhqvst/avanza).
 
 
-**Note** project is a re-implementation of a proof of concept, do not use any code in this project for trading purposes. 
+**Note** project is re-implementated based on a proof of concept, do not use any code in this project for trading purposes. 
 The author will not be responsible for any indirect damages.
 # Project Status
 Incomplete. 
