@@ -1,7 +1,7 @@
-package org.avanza4java.HTTP.Responses.Broker;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Broker;
 
 import com.fasterxml.jackson.annotation.*;
-import org.avanza4java.HTTP.Responses.Orders.Item;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Orders.Item;
 
 import java.util.HashMap;
 import java.util.List;

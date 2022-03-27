@@ -1,21 +1,22 @@
-package org.avanza4java.HTTP.Responses.Charts;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Charts;
 
 import com.fasterxml.jackson.annotation.*;
-import org.avanza4java.HTTP.Responses.Account.Account;
-import org.avanza4java.HTTP.Responses.Broker.BrokerTradeSummary;
-import org.avanza4java.HTTP.Responses.Customer.Customer;
-import org.avanza4java.HTTP.Responses.InstrumentInfo.Stock.TickSizeRule;
-import org.avanza4java.HTTP.Responses.OrderBook.OrderBook;
-import org.avanza4java.HTTP.Responses.Orders.Order;
-import org.avanza4java.HTTP.Responses.Series.ComparisonSeries;
-import org.avanza4java.HTTP.Responses.Series.DataSeries;
-import org.avanza4java.HTTP.Responses.Transaction.HasInvestmentFees;
-import org.avanza4java.HTTP.Responses.Transaction.LatestTrade;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Account.Account;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Broker.BrokerTradeSummary;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Customer.Customer;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.InstrumentInfo.Stock.TickSizeRule;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.InstrumentInfo.searchInfo.Hit;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.OrderBook.OrderBook;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Orders.Order;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Series.ComparisonSeries;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Series.DataSeries;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.HasInvestmentFees;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.LatestTrade;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+/*SAMLINGSKLASS*/
 @JsonInclude (JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder ({
         "ceiling",
@@ -44,7 +45,11 @@ import java.util.Map;
         "orderDepthReceivedTime",
         "orderbook",
         "tickSizeRules",
-        "untradableDates"
+        "untradableDates",
+
+        "hits",
+        "totalNumberOfHits"
+
 })
 public class ChartData {
 
@@ -101,6 +106,10 @@ public class ChartData {
    private List<TickSizeRule> tickSizeRules = null;
    @JsonProperty ("untradableDates")
    private List<Object> untradableDates = null;
+   @JsonProperty ("hits")
+   private List<Hit> hits = null;
+   @JsonProperty ("totalNumberOfHits")
+   private String totalNumberOfHits;
 
    @JsonIgnore
    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -363,6 +372,26 @@ public class ChartData {
    @JsonProperty ("untradableDates")
    public void setUntradableDates(List<Object> untradableDates) {
       this.untradableDates = untradableDates;
+   }
+
+   @JsonProperty ("hits")
+   public List<Hit> getHits() {
+      return hits;
+   }
+
+   @JsonProperty ("hits")
+   public void setHits(List<Hit> hits) {
+      this.hits = hits;
+   }
+
+   @JsonProperty ("totalNumberOfHits")
+   public String getTotalNumberOfHits() {
+      return totalNumberOfHits;
+   }
+
+   @JsonProperty ("totalNumberOfHits")
+   public void setTotalNumberOfHits(String totalNumberOfHits) {
+      this.totalNumberOfHits = totalNumberOfHits;
    }
 
    @JsonAnyGetter

@@ -1,4 +1,4 @@
-package org.avanza4java.Config;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Config;
 
 public class Constants {
    public static final String AVANZA_BASE = "https://www.avanza.se/";
@@ -15,10 +15,11 @@ public class Constants {
    public static final String ORDERBOOK_PATH = "/_mobile/order/{0}?orderbookId={1}";
    public static final String ORDERBOOK_LIST_PATH = "/_mobile/market/orderbooklist/{0}";
    public static final String CHARTDATA_PATH = "/_mobile/chart/orderbook/{0}";
-   public static final String ORDER_PLACE_DELETE_PATH = "/_api/order";
+   public static final String ORDER_PLACE_PATH = "/_cqbe/trading/order/new";
+   public static final String ORDER_DELETE_PATH = "/_api/order?accountId={0}&orderId={1}";
    public static final String ORDER_EDIT_PATH = "/_api/order/{0}/{1}";
    public static final String ORDER_GET_PATH = "/_mobile/order/{0}";
-   public static final String SEARCH_PATH = "/_mobile/market/search/{0}";
+   public static final String SEARCH_PATH = "/_mobile/market/search/{0}?query={1}";
    public static final String AUTHENTICATION_PATH = "/_api/authentication/sessions/usercredentials";
    public static final String TOTP_PATH = "/_api/authentication/sessions/totp";
    public static final String INSPIRATION_LIST_PATH = "/_mobile/marketing/inspirationlist/{0}";

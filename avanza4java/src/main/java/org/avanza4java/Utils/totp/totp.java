@@ -1,11 +1,11 @@
-package org.avanza4java.Utils.totp;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Utils.totp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class totp {
-   private static final String SCRIPTPATH = "/src/main/java/org/avanza4java/Utils/totp/getTotp.py";
+   private static final String SCRIPTPATH = "/domain/src/main/java/org/wTrader/utils/avanzaForJava/avanza4java/src/main/java/org/avanza4java/Utils/totp/getTotp.py";
    private static String totpKey;
    private static String totpSecret;
 
@@ -20,11 +20,10 @@ public class totp {
 
    private String generateSecret() {
       String retVal = "";
-      String userDirectory = System.getProperty("user.dir");
       try {
          String[] cmd = {
                  "python3",
-                 String.valueOf(userDirectory + SCRIPTPATH),
+                 String.valueOf(System.getProperty("user.dir") + SCRIPTPATH),
                  "-t",
                  totpKey
          };

@@ -1,4 +1,4 @@
-package org.avanza4java.HTTP.Responses.Watchlist;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Watchlist;
 
 import com.fasterxml.jackson.annotation.*;
 

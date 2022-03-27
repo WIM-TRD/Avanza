@@ -3,13 +3,14 @@ package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4jav
 import com.google.gson.JsonObject;
 import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Config.Constants;
 
-public class EditOrder extends OrderOptions {
-   private String instrumentType;
+public class DeleteOrder extends OrderOptions {
+
+   private String accountId;
    private String orderId;
 
-   public EditOrder(String instrumentType, String orderId, OrderOptions orderOptions) {
+   public DeleteOrder(String accountId, String orderId, OrderOptions orderOptions) {
       super(orderOptions);
-      this.instrumentType = instrumentType;
+      this.accountId = accountId;
       this.orderId = orderId;
    }
 
@@ -18,9 +19,9 @@ public class EditOrder extends OrderOptions {
       return json;
    }
 
-   public String getEditOrderExtension() {
-      String retVal = Constants.ORDER_EDIT_PATH;
-      retVal = retVal.replace("{0}", instrumentType);
+   public String getDeleteOrderExtension() {
+      String retVal = Constants.ORDER_DELETE_PATH;
+      retVal = retVal.replace("{0}", accountId);
       retVal = retVal.replace("{1}", orderId);
       return retVal;
    }

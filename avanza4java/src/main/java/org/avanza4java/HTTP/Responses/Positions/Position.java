@@ -1,8 +1,8 @@
-package org.avanza4java.HTTP.Responses.Positions;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Positions;
 
 import com.fasterxml.jackson.annotation.*;
-import org.avanza4java.HTTP.Responses.Insight.Link;
-import org.avanza4java.HTTP.Responses.Outcome.Outcome;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Insight.Link;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Outcome.Outcome;
 
 import java.util.HashMap;
 import java.util.Map;

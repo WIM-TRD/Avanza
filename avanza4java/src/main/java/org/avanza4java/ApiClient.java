@@ -84,8 +84,12 @@ public class ApiClient {
                     getResponseHeaders(avanzaConnection.getHeaderFields()),
                     gson.fromJson(jsonObject.toString(), responseType)
             );
+            //TODO: Remove LOGGER.
+            LOGGER.debug("Response ---HEAD--- {} ---BODY--- {} ------ {}",
+                         avanzaConnection.getHeaderFields(),
+                         responseBody, avanzaConnection.getResponseMessage());
          } else {
-            LOGGER.warn("Request to {} failed with error code {}---{}---{}",
+            LOGGER.warn("Request to {} failed with error code {}---BODY---{} ----{}",
                         avanzaConnection.getURL().toString(), responseCode, responseBody, avanzaConnection.getResponseMessage());
          }
       } catch (MalformedURLException e) {

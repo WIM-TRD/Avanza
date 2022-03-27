@@ -1,8 +1,8 @@
-package org.avanza4java.HTTP.Responses.InstrumentInfo.Stock;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.InstrumentInfo.Stock;
 
 import com.fasterxml.jackson.annotation.*;
-import org.avanza4java.HTTP.Responses.Transaction.Activity.Buy;
-import org.avanza4java.HTTP.Responses.Transaction.Activity.Sell;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.Activity.Buy;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.Activity.Sell;
 
 import java.util.HashMap;
 import java.util.Map;

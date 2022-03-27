@@ -1,9 +1,9 @@
-package org.avanza4java.HTTP.Responses.Orders;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Orders;
 
 import com.fasterxml.jackson.annotation.*;
-import org.avanza4java.HTTP.Responses.Account.AccountSimple;
-import org.avanza4java.HTTP.Responses.OrderBook.OrderBook;
-import org.avanza4java.HTTP.Responses.Transaction.TransactionFees;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Account.AccountSimple;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.OrderBook.OrderBook;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.TransactionFees;
 
 import java.util.HashMap;
 import java.util.List;
@@ -23,8 +23,9 @@ import java.util.Map;
         "orderType",
         "price",
         "rawStatus",
-        "requestId",
-        "status",
+/*        "requestId",
+        "status", */
+        "orderRequestStatus",
         "statusDescription",
         "sum",
         "transactionFees",
@@ -42,7 +43,7 @@ public class Order {
    @JsonProperty ("marketTransaction")
    private String marketTransaction;
    @JsonProperty ("messages")
-   private List<String> messages = null;
+   private String messages;
    @JsonProperty ("modifyAllowed")
    private String modifyAllowed;
    @JsonProperty ("orderDateTime")
@@ -59,10 +60,12 @@ public class Order {
    private String price;
    @JsonProperty ("rawStatus")
    private String rawStatus;
-   @JsonProperty ("requestId")
+  /* @JsonProperty ("requestId")
    private String requestId;
    @JsonProperty ("status")
-   private String status;
+   private String status;*/
+   @JsonProperty("orderRequestStatus")
+   private String orderRequestStatus;
    @JsonProperty ("statusDescription")
    private String statusDescription;
    @JsonProperty ("sum")
@@ -111,12 +114,12 @@ public class Order {
    }
 
    @JsonProperty ("messages")
-   public List<String> getMessages() {
+   public String getMessages() {
       return messages;
    }
 
    @JsonProperty ("messages")
-   public void setMessages(List<String> messages) {
+   public void setMessages(String messages) {
       this.messages = messages;
    }
 
@@ -199,7 +202,7 @@ public class Order {
    public void setRawStatus(String rawStatus) {
       this.rawStatus = rawStatus;
    }
-
+/*
    @JsonProperty ("requestId")
    public String getRequestId() {
       return requestId;
@@ -218,6 +221,16 @@ public class Order {
    @JsonProperty ("status")
    public void setStatus(String status) {
       this.status = status;
+   }
+*/
+   @JsonProperty ("orderRequestStatus")
+   public String getOrderRequestStatus() {
+      return orderRequestStatus;
+   }
+
+   @JsonProperty ("orderRequestStatus")
+   public void setOrderRequestStatus(String orderRequestStatus) {
+      this.orderRequestStatus = orderRequestStatus;
    }
 
    @JsonProperty ("statusDescription")

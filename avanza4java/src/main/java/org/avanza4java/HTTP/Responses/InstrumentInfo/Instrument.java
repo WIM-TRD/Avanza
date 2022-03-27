@@ -1,10 +1,10 @@
-package org.avanza4java.HTTP.Responses.InstrumentInfo;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.InstrumentInfo;
 
 import com.fasterxml.jackson.annotation.*;
-import org.avanza4java.HTTP.Responses.Outcome.Outcome;
-import org.avanza4java.HTTP.Responses.Outcome.TotalOutcome;
-import org.avanza4java.HTTP.Responses.Outcome.TotalOutcomeForUnknownDevelopments;
-import org.avanza4java.HTTP.Responses.Positions.Position;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Outcome.Outcome;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Outcome.TotalOutcome;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Outcome.TotalOutcomeForUnknownDevelopments;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Positions.Position;
 
 import java.util.HashMap;
 import java.util.List;

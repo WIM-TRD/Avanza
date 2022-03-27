@@ -1,8 +1,8 @@
-package org.avanza4java.HTTP.Requests.Orders;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Orders;
 
 import com.google.gson.JsonObject;
-import org.avanza4java.HTTP.Responses.Orders.OrderType;
-import org.avanza4java.Utils.date.DateUtils;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Orders.OrderType;
+import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Utils.date.DateUtils;
 
 import java.util.Date;
 
@@ -31,14 +31,13 @@ public class OrderOptions {
       this.price = orderOptions.getPrice();
       this.validUntil = orderOptions.getValidUntil();
       this.volume = orderOptions.getVolume();
-
    }
 
    public JsonObject toJson() {
       JsonObject json = new JsonObject();
       json.addProperty("accountId", accountId);
       json.addProperty("orderbookId", orderbookId);
-      json.addProperty("orderType", orderType.toString());
+      json.addProperty("side", orderType.toString());
       json.addProperty("price", price);
       json.addProperty("validUntil", validUntil);
       json.addProperty("volume", volume);

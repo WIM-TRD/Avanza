@@ -1,4 +1,4 @@
-package org.avanza4java.HTTP;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP;
 
 public class HTTPMethod {
    public static final HTTPMethod GET = new HTTPMethod("GET");

@@ -1,4 +1,4 @@
-package org.avanza4java.HTTP.Responses.InstrumentInfo;
+package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.InstrumentInfo;
 
 public class InstrumentType {
    public static final String STOCK = "stock";
