@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class totp {
-   private static final String SCRIPTPATH = "/domain/src/main/java/org/wTrader/utils/avanzaForJava/avanza4java/src/main/java/org/avanza4java/Utils/totp/getTotp.py";
+   private static final String SCRIPTPATH = "/src/main/java/org/avanza4java/Utils/totp/getTotp.py";
    private static String totpKey;
    private static String totpSecret;
 
