@@ -1,8 +1,8 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Orders;
+package org.avanza4java.HTTP.Requests.Orders;
 
 import com.google.gson.JsonObject;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Orders.OrderType;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Utils.date.DateUtils;
+import org.avanza4java.HTTP.Responses.Orders.OrderType;
+import org.avanza4java.Utils.date.DateUtils;
 
 import java.util.Date;
 

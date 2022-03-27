@@ -1,4 +1,4 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Config;
+package org.avanza4java.Config;
 
 public class Constants {
    public static final String AVANZA_BASE = "https://www.avanza.se/";

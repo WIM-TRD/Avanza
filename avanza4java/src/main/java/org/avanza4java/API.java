@@ -1,26 +1,26 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java;
+package org.avanza4java;
 
 import org.wTrader.utils.AvanzaAPI.HTTP.Responses.InstrumentInfo.Stock.StockInfo;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Config.Constants;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.HTTPMethod;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Authentication.LoginRequest;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Authentication.TotpRequest;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Orders.DeleteOrder;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Orders.EditOrder;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Orders.OrderOptions;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Account.AccountOverview;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Account.Overview;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Authentication.LoginResponse;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Authentication.TotpResponse;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Charts.ChartData;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Deals.DealsAndOrders;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.HTTPResponse;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Insight.InsightReport;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.InstrumentInfo.InstrumentType;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.OrderBook.OrderBookInfo;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Orders.Order;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Positions.HeldPositions;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Utils.totp.totp;
+import org.avanza4java.Config.Constants;
+import org.avanza4java.HTTP.HTTPMethod;
+import org.avanza4java.HTTP.Requests.Authentication.LoginRequest;
+import org.avanza4java.HTTP.Requests.Authentication.TotpRequest;
+import org.avanza4java.HTTP.Requests.Orders.DeleteOrder;
+import org.avanza4java.HTTP.Requests.Orders.EditOrder;
+import org.avanza4java.HTTP.Requests.Orders.OrderOptions;
+import org.avanza4java.HTTP.Responses.Account.AccountOverview;
+import org.avanza4java.HTTP.Responses.Account.Overview;
+import org.avanza4java.HTTP.Responses.Authentication.LoginResponse;
+import org.avanza4java.HTTP.Responses.Authentication.TotpResponse;
+import org.avanza4java.HTTP.Responses.Charts.ChartData;
+import org.avanza4java.HTTP.Responses.Deals.DealsAndOrders;
+import org.avanza4java.HTTP.Responses.HTTPResponse;
+import org.avanza4java.HTTP.Responses.Insight.InsightReport;
+import org.avanza4java.HTTP.Responses.InstrumentInfo.InstrumentType;
+import org.avanza4java.HTTP.Responses.OrderBook.OrderBookInfo;
+import org.avanza4java.HTTP.Responses.Orders.Order;
+import org.avanza4java.HTTP.Responses.Positions.HeldPositions;
+import org.avanza4java.Utils.totp.totp;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -83,7 +83,7 @@ public class API {
    }
 
    public String getTotpSecret() {
-      org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Utils.totp.totp retVal = new totp(totp);
+      org.avanza4java.Utils.totp.totp retVal = new totp(totp);
       return retVal.getTotpSecret();
    }
 
@@ -108,8 +108,6 @@ public class API {
    }
 
    public Order placeOrder(OrderOptions orderOptions) {
-      System.out.println(orderOptions.toJson());
-      System.out.println(headers);
       return (apiClient.call(HTTPMethod.POST, headers, orderOptions.toJson(),
                              Constants.ORDER_PLACE_PATH, Order.class).getBody());
    }

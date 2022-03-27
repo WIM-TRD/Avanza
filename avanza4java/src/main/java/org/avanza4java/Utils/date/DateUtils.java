@@ -1,4 +1,4 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Utils.date;
+package org.avanza4java.Utils.date;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

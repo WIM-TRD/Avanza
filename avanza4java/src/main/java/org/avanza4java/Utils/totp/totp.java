@@ -1,4 +1,4 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Utils.totp;
+package org.avanza4java.Utils.totp;
 
 import java.io.BufferedReader;
 import java.io.IOException;

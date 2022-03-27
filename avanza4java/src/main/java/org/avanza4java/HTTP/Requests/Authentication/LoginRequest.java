@@ -1,4 +1,4 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Authentication;
+package org.avanza4java.HTTP.Requests.Authentication;
 
 import com.google.gson.JsonObject;
 

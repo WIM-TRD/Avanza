@@ -1,4 +1,4 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.Activity;
+package org.avanza4java.HTTP.Responses.Transaction.Activity;
 
 import com.fasterxml.jackson.annotation.*;
 

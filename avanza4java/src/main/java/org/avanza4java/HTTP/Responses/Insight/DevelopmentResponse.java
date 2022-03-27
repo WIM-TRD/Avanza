@@ -1,10 +1,10 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Insight;
+package org.avanza4java.HTTP.Responses.Insight;
 
 import com.fasterxml.jackson.annotation.*;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Charts.ChartDatum;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.InstrumentInfo.Instrument;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.OtherTransactions;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Responses.Transaction.TransactionsResponse;
+import org.avanza4java.HTTP.Responses.Charts.ChartDatum;
+import org.avanza4java.HTTP.Responses.InstrumentInfo.Instrument;
+import org.avanza4java.HTTP.Responses.Transaction.OtherTransactions;
+import org.avanza4java.HTTP.Responses.Transaction.TransactionsResponse;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,7 +1,7 @@
-package org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.HTTP.Requests.Orders;
+package org.avanza4java.HTTP.Requests.Orders;
 
 import com.google.gson.JsonObject;
-import org.wTrader.utils.avanzaForJava.avanza4java.src.main.java.org.avanza4java.Config.Constants;
+import org.avanza4java.Config.Constants;
 
 public class EditOrder extends OrderOptions {
    private String instrumentType;
