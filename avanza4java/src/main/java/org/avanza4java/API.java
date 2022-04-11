@@ -1,6 +1,6 @@
 package org.avanza4java;
 
-import org.wTrader.utils.AvanzaAPI.HTTP.Responses.InstrumentInfo.Stock.StockInfo;
+import org.avanza4java.HTTP.Responses.InstrumentInfo.Stock.StockInfo;
 import org.avanza4java.Config.Constants;
 import org.avanza4java.HTTP.HTTPMethod;
 import org.avanza4java.HTTP.Requests.Authentication.LoginRequest;
